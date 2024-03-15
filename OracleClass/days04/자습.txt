@@ -1,0 +1,37 @@
+LENGTH	LENGTHB
+NULLIF
+
+MOD(SUBSTR(ssn,8,1),2)
+REPLACE (REPLACE ( t.gender,1,'남자' ),0,'여자')   
+NVL2(NULLIF(MOD(SUBSTR(ssn,8,1),2),1),'O','X')gender
+
+INSERT INTO DEPT(deptno,dname,loc)VALUES(50,'QC','SEOUL');
+
+,LENGTH(name)
+,LENGTHB(name)
+
+UPDATE dept
+SET(dname , loc) = (SELECT dname, loc FROM dept WHERE DEPTNO=20)
+WHERE deptNO = 50;
+
+DELETE FROM dept
+WHERE deptno = 50;
+COMMIT;
+
+DROP PUBLIC SYNONYM arirang;
+
+CREATE PUBLIC SYNONYM arirang
+FOR scott.emp;
+
+DROP PUBLIC SYNONYM arirang;
+
+WHERE dname LIKE '%\%%' ESCAPE '\';
+
+SELECT deptno , ename , sal + NVL(comm,0)pay
+FROM emp
+ORDER BY 1 ASC,3 DESC;
+ORDER BY deptno ASC,pay DESC;
+
+ALL ANY SOME 
+EXIST
+상관관계 

@@ -1,0 +1,19 @@
+package days01;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		//문제
+		//부서번호(DEPTNO)를 입력받아서
+		//emp 테이블에서 SELECT 하는 코딩..
+		//EMPVO
+		// dispEmp(ArrayList<EmpVO>list)
+		SELECT *
+		FROM emp
+		WHERE deptno = 40;
+		
+		
+
+	}
+
+}
