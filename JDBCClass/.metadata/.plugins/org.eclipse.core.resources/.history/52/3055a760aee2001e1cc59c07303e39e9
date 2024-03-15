@@ -12,9 +12,7 @@ public class Ex04 {
 //		FROM emp
 //		WHERE deptno = 40;
 		
-		for (int i = 0; i < 10; i++) {
-			System.out.println("테스트");
-		}
+		test
 
 	}
 
