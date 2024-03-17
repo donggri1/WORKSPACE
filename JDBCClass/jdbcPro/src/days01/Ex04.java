@@ -12,8 +12,7 @@ public class Ex04 {
 //		FROM emp
 //		WHERE deptno = 40;
 		
-		test
-
+		// 뭐가문제야.. 왜
 	}
 
 }
