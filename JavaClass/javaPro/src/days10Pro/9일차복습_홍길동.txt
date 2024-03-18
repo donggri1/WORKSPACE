@@ -1,0 +1,43 @@
+1.  주민등록번호를 검증( check ) 하는 함수를 선언하세요.
+    1) 기능          
+    2) 매개변수  
+    3) 리턴값 및 리턴자료형
+검증공식) X=(11−(2*A+3B+4C+5D+6E+7F+8G+9H+2I+3J+4K+5L)mod11)mod10검증공식) X=(11−(2*A+3B+4C+5D+6E+7F+8G+9H+2I+3J+4K+5L)mod11)mod10
+
+    public static boolean checkRRN(String rrn)
+    {
+	     int tot = 0;
+	     int [] m = {2,3,4,5,6,7,0,8,9,2,3,4,5};
+	     for(int i=0; i<=12; i++){
+	         tot += (rrn.charAt(i)-48) * m[i] ;
+	     }
+	     int X=(11−(tot)%11)%10;     
+	     return rrn.charAt(13)-48  == X;  
+    }     
+           
+2. 10진수 정수를 입력받아서 8진수로 출력
+2-2. 10진수 정수를 입력받아서 16진수로 출력
+
+3. 주민등록번호를 입력받아서 만나이 계산해서 반환하는 함수 선언
+   ( 
+      함수 프로토타입(Prototype)  == 함수 원형
+      int getAmericanAge( String rrn ) 
+   )          
+  public static int getAmericanAge(String rrn){
+     int 만나이 = 올해년도 - 출생년도   ( 생일지남여부 -1)
+     int 올해년도 = 2024;  // Date, Calendar 날짜 ,시간 클래스
+     int 성별 = 1; 
+     int 출생년도 = Integer.paresInt( "19" + rrn.sbustring(0,2) );     
+     "0112" -> 112 
+     "1201" -> 1201
+     오늘날짜  <= 생일날짜(mmdd)     
+    return 만나이;
+  }
+
+         
+        
+        
+        
+        
+        
+       
