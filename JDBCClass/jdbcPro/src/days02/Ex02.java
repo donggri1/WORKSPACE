@@ -97,7 +97,8 @@ public class Ex02 {
 			sql += String.format(" deptno IN (%s) ", searchWord);
 		} else if (searchCondition == 4) {
 			sql += String.format(
-					" REGEXP_LIKE( dname ,'%1$s', 'i' ) OR  REGEXP_LIKE( loc ,'%1$s', 'i' )"
+					" REGEXP_LIKE( dname ,'%1$s', 'i' ) OR  "
+					+ "REGEXP_LIKE( loc ,'%1$s', 'i' )"
 					, searchWord.trim() );
 		} else { // 2,3
 			sql += String.format(
