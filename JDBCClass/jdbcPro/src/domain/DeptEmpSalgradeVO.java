@@ -25,7 +25,7 @@ public class DeptEmpSalgradeVO {
 		private Date hiredate; //java.util.Date;
 		private double pay;
 		private int grade;
-		
+		private int deptno;
 		
 
 

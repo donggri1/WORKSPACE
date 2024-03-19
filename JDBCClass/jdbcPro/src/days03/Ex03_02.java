@@ -37,6 +37,8 @@ public class Ex03_02 {
 				+ "            JOIN salgrade s  ON sal BETWEEN losal AND hisal "
 				+ "WHERE grade = ?   ";
 		
+		
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null, empPstmt = null;
 		ResultSet rs = null, empRs = null;
@@ -63,7 +65,7 @@ public class Ex03_02 {
 					//
 					empPstmt = conn.prepareStatement(empSql);
 					empPstmt.setInt(1, grade);
-					empRs = empPstmt.executeQuery();
+					empRs = empPstmt.executeQuery();	
 					
 					if (empRs.next()) {
 						empList = new ArrayList<DeptEmpSalgradeVO>();
