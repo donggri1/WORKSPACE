@@ -22,11 +22,11 @@ public class EmpVO {
 	private String job;
 	private int mgr;
 	//private String hiredate; 
-	//private Date hiredate;
 	private Date hiredate;
+//	private String hire;
 	
-	private double sal;
-	private double comm;
+	private Double sal;
+	private Double comm;
 	private int deptno;
 
 }

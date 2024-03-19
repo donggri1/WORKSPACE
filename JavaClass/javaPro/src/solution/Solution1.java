@@ -12,6 +12,8 @@ public class Solution1 {
         System.out.println(answer);
     }
 
+    
+    
     public static String solution(String str1, String str2) {
         StringBuilder result = new StringBuilder(); // 결과 문자열을 저장할 StringBuilder 객체 생성
         int sw = 0;
