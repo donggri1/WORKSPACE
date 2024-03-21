@@ -15,7 +15,7 @@ import com.util.DBConn;
 import domain.DeptEmpVO;
 import domain.EmpVO2;
 
-public class Tr {
+public class Ex01 {
 
 	public static void main(String[] args) {
 		/*
