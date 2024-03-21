@@ -12,13 +12,14 @@ import com.util.DBConn;
 import days05.board.domain.BoardDTO;
 import days05.board.persistence.BoardDAO;
 import days05.board.persistence.BoardDAOImpl;
+import days05.board.service.BoardService;
 
-public class BoardDAOImplTest {
+public class BoardServiceTest {
 
 
 	/*
 	@Test
-	void testSelBoard() {
+	void testSelectService() {
 		
 		Connection conn = DBConn.getConnection();
 	
@@ -27,7 +28,7 @@ public class BoardDAOImplTest {
 		try {
 			ArrayList<BoardDTO> list = dao.Select();
 			System.out.println("사원수 : " + list.size()+ " 명");
-			System.out.println("ttasd : " + list.toString());
+			System.out.println("컬럼 : " + list.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -35,27 +36,43 @@ public class BoardDAOImplTest {
 		DBConn.close();
 	}
 	*/
+	@Test
+	   void testService() {
+	      Connection conn = DBConn.getConnection();
+	      BoardDAO dao = new BoardDAOImpl(conn);
+	      BoardService service = new BoardService(dao);
+	      try {
+	         ArrayList<BoardDTO> list = service.selectService();
+	         System.out.println("게시글 수  :" + list.size());
+	      } catch (Exception e ) {
+	         e.printStackTrace();
+	      } finally {
+	         DBConn.close();
+	      }
+	      
+	   }
+	
 	/*
 	@Test
-	void testInsert() {
+	void testInsertService() {
 		BoardDTO dto = BoardDTO.builder()
-				.title("첫 번째 게시글")
+				.title("예비군 훈련")
 				.writer("김영진")
 				.pwd("1234")
 				.email("kim@ss.com")
 				.tag(0)
-				.content("첫 번째 게시글 내용")
+				.content("결석")
 				.build();
 		Connection conn = DBConn.getConnection();
 		BoardDAO dao = new BoardDAOImpl(conn);
+		BoardService service = new BoardService(dao);
 		int rowCount =0;
-		
 		try {
-			rowCount =  dao.insert(dto);
+			rowCount =  service.insertService(dto);
 			if (rowCount ==1 ) {
 				System.out.println("게시글 작성 완료");
 			}
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
 			DBConn.close();	
