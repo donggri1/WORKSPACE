@@ -1,0 +1,112 @@
+package days25;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import days24.MemberVO;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// Hashtable, HashMap, TreeMap, SortedMap
+		String fileName = ".\\src\\days24\\Java 팀 구성.txt";
+		HashMap<TeamVo, ArrayList<MemberVO>> teamMap = new LinkedHashMap<>(); // 순서있는 맵으로 변경 
+		String line = null;
+		String teamName = null;
+		ArrayList<MemberVO> teamList = null;
+
+		try(FileReader fr = new FileReader(fileName);
+				BufferedReader br = new BufferedReader(fr)   ) {
+			String name =null;
+			while (   (line = br.readLine()) != null && !line.equals("") ) {
+				teamName = line; // teamName
+				line = br.readLine(); // 구본혁(팀장),류영은,윤형준,김영진,강명건,김진성,유진,이동찬
+				String [] tNames = line.split("\\s*,\\s*");
+				teamList = new ArrayList<>();
+				String leader =null;
+				for (int i = 0; i < tNames.length; i++) {
+					name = tNames[i];
+					if ( name.contains("팀장") ) {  // 팀장
+						leader = name = name.replace("(팀장)", "");//***
+						teamList.add(new MemberVO( name, "팀장"));
+					} else {  // 팀원
+						teamList.add(new MemberVO( name, "팀원"));
+					} // if
+				} // for
+				
+				int totalNumber = teamList.size();
+				
+				teamMap.put(new TeamVo(teamName, totalNumber, name), teamList);
+			} // while
+
+			// 출력
+			dispTeamMember(teamMap);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	} // main
+
+	private static void dispTeamMember(HashMap<TeamVo, ArrayList<MemberVO>> teamMap) {
+
+		Set<Entry<TeamVo, ArrayList<MemberVO>>> es = teamMap.entrySet();      
+		Iterator<Entry<TeamVo, ArrayList<MemberVO>>> ir = es.iterator();
+
+		while (ir.hasNext()) {
+			Entry<TeamVo, ArrayList<MemberVO>> entry = ir.next();
+			TeamVo key = entry.getKey();  // "1조"   "2조"
+			ArrayList<MemberVO> value = entry.getValue();
+			MemberVO teamReaderVO = value.get(0);
+			System.out.printf("[%s(%d명):%s]\n"
+					, key.getName(),key.getTotalNumber(),key.getName() );
+			Iterator<MemberVO> ir2 = value.iterator();
+			int seq = 1;
+			ir2.next(); // 팀장 건너띄기
+			while (ir2.hasNext()) {
+				MemberVO vo =  ir2.next();
+
+				System.out.printf("[%d] %s\n ", seq++ , vo.getName());
+
+			}
+
+		} // while
+
+
+		//		      [1조(8명):구본혁]
+		//		        [1] 류영은
+		//		        [2] 윤형준
+		//		        [3] 김영진
+		//		        [4] 강명건
+		//		        [5] 김진성
+		//		        [6] 유진
+		//		        [7] 이동찬
+		//		      [2조(7명):원대안]
+		//		        [1] 이동영
+		//		        [2] 한재호
+		//		        [3] 권맑음
+		//		        [4] 박우현
+		//		        [5] 이시은
+		//		        [6] 조연화 
+
+	}
+
+} // class
+
+@Data
+@AllArgsConstructor
+@Builder
+class TeamVo{
+	private String name;
+	private int totalNumber;
+	private String leader;
+}

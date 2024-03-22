@@ -1,0 +1,92 @@
+1. emp 테이블의 job의 갯수 출력
+
+SELECT COUNT(DISTINCT(job))
+      ,COUNT(job)
+FROM emp;
+
+SELECT COUNT(*)
+FROM(
+        SELECT DISTINCT job
+        FROM emp
+    );
+
+2. emp 테이블에서 ename    'la' 대소문자 구분없이 있는 사원 조회
+                              'la'  'La'  'lA'  'LA'
+
+SELECT ename
+    ,REPLACE (ename,'LA','<span style="color : red">LA</span>')
+FROM emp
+WHERE REGEXP_LIKE(ename,'la','i');
+-- match option : i(대소문자구분X)
+WHERE ename LIKE '%la%' OR LIKE '%la%' ORLIKE '%la%' ORLIKE '%la%' OR
+                              
+3.  emp 테이블에서 급여를 가장 많이 받는 사원의 정보를 조회.     
+[2]
+
+SELECT *
+FROM emp
+WHERE sal+NVL(comm,0) >= ALL(SELECT (sal+NVL(comm,0))
+                            FROM emp)
+
+[1]
+SELECT *
+FROM emp
+WHERE sal+NVL(comm,0) = (
+                            SELECT MAX(sal+NVL(comm,0))
+                            FROM emp);
+
+
+3-2. emp 테이블에서 급여를 가장 적게 받는 사원의 정보를 조회.
+[2]
+
+SELECT *
+FROM emp
+WHERE sal+NVL(comm,0) <= ALL(SELECT (sal+NVL(comm,0))
+                            FROM emp)
+
+[1]
+SELECT *
+FROM emp
+WHERE sal+NVL(comm,0) = (
+                            SELECT MIN(sal+NVL(comm,0))
+                            FROM emp);
+
+4. emp 테이블에서 총 사원수 조회
+SELECT COUNT(*) 
+FROM emp
+4-2. emp 테이블에서 각 부서별 사원수 조회
+[3]
+SELECT deptno
+        ,COUNT(*)
+        ,SUM( sal+NVL(comm,0)) 
+        ,AVG( sal+NVL(comm,0)) 
+        ,MAX( sal+NVL(comm,0)) 
+        ,MIN( sal+NVL(comm,0)) 
+FROM emp
+GROUP BY deptno     -- GROUP BY 는 집계함수를 반드시사용
+ORDER BY deptno;
+
+SELECT COUNT(*) 
+FROM emp;
+
+SELECT * 
+FROM emp
+ORDER BY deptno ;
+--[2]
+SELECT DISTINCT deptno
+    ,(  SELECT COUNT(*)
+        FROM emp C
+        WHERE c.deptno = p.deptno
+    ) CNT
+FROM emp p
+ORDER BY deptno ASC;
+
+5. emp 테이블에서 각 사원의 급여별 등수
+SELECT deptno,empno,ename,sal + NVL(comm,0) pay
+    ,(
+      SELECT COUNT (*) +1
+      FROM emp c 
+      WHERE c.sal+NVL(comm,0)> p.sal+NVL(comm,0)
+      ) pay_rank
+FROM emp p 
+--ORDER BY pay DESC;

@@ -1,0 +1,57 @@
+1. 선택정렬 selectionSort2()  함수만 구현하세요.
+
+   public static void selectionSort2( int [] m ){
+       // [?]             minIndex x  
+       // [1] [5] [2] [4] 3
+       for(int i=0 ; i < m.length-1; i++){
+          int minIndex = i;
+          for(int j=i+1; j < m.length; j++){
+            가장 작은 값을 가진 인덱스  minIndex 저장.
+          }
+          continue ;
+          // m[minIndex]  m[i] 자리바꿈
+          
+       }
+   } 
+   
+10:03 수업 시작~ 
+2. 30명의 학생의 이름,국,영,수,총,평,등수 처리하는 코딩을 하세요.
+등수
+  for(i=0; <; ){     i 등수 매길학생
+     for(j=0;~     비교할 모든 학생
+       총점  <   등수++
+  }
+ 
+3. 순차검색 sequentialSearch() 함수 구현해서 
+   배열 안의 임의의 정수를 찾아서 인덱스를 모두 출력
+   하는 코딩을 하세요 ...
+   (조건)
+   int [] m = new int[50];
+   1~30 까지의 임의의 수를 채워넣고
+   beginIndex = 0
+   while( (foundIndex = sequentialSearch(m, n, beginIndex ) != -1){
+   
+      beginIndex = foundIndexx +1;
+   }
+   
+   public static int sequentialSearch(int [] m, int n, int beginIndex){
+      for( i=beginIndex; i< ; i++){
+         return i;
+      }      
+      return -1;
+   }
+   
+   public static int sequentialSearch(int [] m, int n){
+      for( i=0; i< ; i++){
+      }
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+

@@ -1,0 +1,4 @@
+--SYS
+SELECT *
+FROM V$RESERVED_WORDS
+WHERE keyword = UPPER('date');

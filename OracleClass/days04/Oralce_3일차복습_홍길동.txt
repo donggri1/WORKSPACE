@@ -1,0 +1,345 @@
+1. subquery 란 ?    쿼리 안에 쿼리(select)
+1-2. 인라인뷰(inline view)란?  from 절 + 서브쿼리
+1-3. 스칼라 서브쿼리( Scalar subquery ) 란? select 절 + 서브쿼리
+1-4. 중첩 서브쿼리(Nested subquery) 란? where 절 + 서브쿼리
+
+2. WITH 절에 대해서 설명하세요.
+   WITH 이름 AS (서브쿼리)
+       ,이름 AS (서브쿼리)
+          :
+   SELECT
+   FROM 
+   WHERE
+   GROUP BY
+   HAVING
+   ORDER BY
+   
+   SELECT   sal + NVL(comm,0) pay
+   FROM emp
+   WHERE pay X
+   
+
+3. 어제까지 배운 [Oracle 함수]를 적고 설명하세요 . 
+   1) 문자 함수
+       UPPER(), LOWER(), INITCAP()
+       LENGTH(),  SUBSTR(), CONCAT()
+   2) 숫자 함수
+       EXTRACT( YEAR  FROM 컬럼 )
+       MOD()
+   3) 변환 함수
+       TO_CHAR()
+       TO_NUMBER()
+       TO_DATE()
+   4) 정규표현식 함수
+       REGEXP_LIKE()
+   5) NULL 함수
+      NVL()
+      NVL2()
+      NULLIF()
+      COALESCE()
+   6) 날짜
+      SYSDATE
+      CURRENT_TIMESTAMP
+      
+3-2. 어제까지 배운 오라클의 연산자(operator)를 적으세요.  
+    1) 비교연산자    =   != ^= <>  
+    2) 연결 연산자  ||
+    3) SQL 연산자 IS [NOT] NULL , [NOT] IN ( 목록 )  
+                 [NOT] BETWEEN a AND b
+                 [NOT] LIKE ESCAPE
+    4) 논리연산자  AND OR NOT
+  
+4.insa 테이블에서 사원들이 속한 부서명을 중복되지 않게 아래와 같이
+  부서명 오름차순 정렬( ASC )해서 출력하세요.
+  SELECT DISTINCT buseo
+  FROM insa
+  ORDER BY buseo ASC;
+
+5.insa테이블에서 ssn 컬럼을 통해서 year, month, date, gender 출력
+
+      SSN          YEAR MONTH DATE GENDER  
+    ---------- ------ ---- ----- -----
+    771212-1022432	77	12	12	1
+    801007-1544236	80	10	07	1
+    770922-2312547	77	09	22	2
+    790304-1788896	79	03	04	1
+    811112-1566789	81	11	12	1
+    :
+    60개 행이 선택되었습니다. 
+    
+    SELECT ssn
+    , SUBSTR(ssn, 1, 2) YEAR 
+    , SUBSTR(ssn, 3, 2) MONTH 
+    , SUBSTR(ssn, 4, 2) "DATE" 
+    , SUBSTR(ssn, 8, 1) GENDER  
+   FROM insa;
+    
+5-2.  emp 테이블에서 입사년도 컬럼에서 년,월,일 찾아서 출력
+    ㄱ. 년도 찾을 때는 TO_CHAR(숫자,날짜,문자) 함수 사용
+    ㄴ. 월 찾을 때는 SUBSTR() 함수 사용
+    
+    ENAME      HIREDATE YEAR MONTH DATE
+    ---------- -------- ---- -- --
+    SMITH      80/12/17 1980 12 17
+    ALLEN      81/02/20 1981 02 20
+    WARD       81/02/22 1981 02 22
+    JONES      81/04/02 1981 04 02
+    MARTIN     81/09/28 1981 09 28
+    BLAKE      81/05/01 1981 05 01
+    CLARK      81/06/09 1981 06 09
+    KING       81/11/17 1981 11 17
+    TURNER     81/09/08 1981 09 08
+    JAMES      81/12/03 1981 12 03
+    FORD       81/12/03 1981 12 03
+    MILLER     82/01/23 1982 01 23
+
+12개 행이 선택되었습니다.    
+
+SELECT ENAME, HIREDATE
+   , TO_CHAR( hiredate, 'YYYY')  YEAR
+   , SUBSTR(hiredate, 4, 2) MONTH 
+   , TO_CHAR( hiredate, 'DDD')  "DATE"
+   , TO_CHAR( hiredate, 'DD')  "DATE"
+   , TO_CHAR( hiredate, 'D')  "DATE"
+FROM emp;
+ 
+6. insa 테이블에서 70년대 12월생 모든 사원 아래와 같이 주민등록번호로 정렬해서 출력하세요.
+
+    NAME                 SSN           
+    -------------------- --------------
+    문길수               721217-1951357
+    김인수               731211-1214576
+    홍길동               771212-1022432   
+
+SELECT name, ssn
+FROM insa
+-- WHERE ssn LIKE '7_12%'  REGEXP_LIKE()
+-- WHERE SUBSTR(ssn, 1,1) = '7' AND SUBSTR(ssn, 3,2) = '12'
+WHERE REGEXP_LIKE(ssn, '^7\d12')
+WHERE REGEXP_LIKE(ssn, '^7[0-9]12')
+ORDER BY ssn ASC;
+
+7. emp 테이블에서
+   pay(sal+comm)  1000 이상~ 3000 이하 받는  
+   30부서원을 제외한 모든 사원들만 
+   ename을 기준으로 오름차순 정렬해서 조회하는 쿼리를 작성하세요.  
+    ㄱ. 일반 쿼리 사용.    
+    ㄴ. inline view 사용 
+    ㄷ. with 절 사용  
+
+    ㄱ. 일반 쿼리 사용.    
+    SELECT deptno, empno, ename, sal, comm, sal + NVL(comm,0) pay
+    FROM emp
+    WHERE ( sal + NVL(comm,0) BETWEEN 1000 AND 3000 ) AND deptno != 30
+    ORDER BY ename ASC ;
+    
+    ㄴ. inline view 사용 
+    SELECT t.*
+    FROM (     -- 인라인뷰
+                SELECT deptno, empno, ename, sal, comm, sal + NVL(comm,0) pay
+                FROM emp
+          ) t
+    WHERE  ( t.pay BETWEEN 1000 AND 3000 )  AND t.deptno != 30
+    ORDER BY t.ename ASC ;
+    
+    ㄷ. with 절 사용   
+    WITH  
+        temp AS (
+                SELECT deptno, empno, ename, sal, comm, sal + NVL(comm,0) pay
+                FROM emp
+        )
+    SELECT temp.*
+    FROM  temp
+    WHERE( temp.pay BETWEEN 1000 AND 3000 )  AND temp.deptno != 30
+    ORDER BY temp.ename ASC ;  
+
+8. insa 테이블에서 70년대 남자 사원만 조회.    
+    ㄱ. LIKE 연산자 사용.    
+FROM insa
+-- WHERE ssn LIKE '7%' AND ssn LIKE '______-1';
+WHERE ssn LIKE '7_____-1%' ;
+
+SELECT name, ssn
+   , TO_NUMBER( SUBSTR(ssn, 8, 1))  GENDER  -- '1'   '2'
+   , MOD(  SUBSTR(ssn, 8, 1), 2 ) 
+FROM insa
+WHERE ssn LIKE '7%' AND MOD(  SUBSTR(ssn, 8, 1), 2 ) =1;
+    
+    ㄴ. REGEXP_LIKE() 함수 사용 
+SELECT name, ssn 
+FROM insa
+WHERE REGEXP_LIKE( ssn, '^7[0-9]{5}-[13579]'  );    
+
+9. emp 테이블에서 사원명(ename) 속에  'la' 문자열을 포함하는 사원 정보를 조회(출력)
+   (조건 : 'la'문자는 대소문자를 구분하지 않는다.    la   La  lA  LA )
+
+SELECT ename
+      , REPLACE(ename, 'LA', '<span style="color:red">LA</span>')
+FROM emp
+-- WHERE ename LIKE '%' || UPPER('la') || '%'; -- JDBC 기억
+WHERE REGEXP_LIKE(ename, 'la', 'i');
+-- WHERE ename LIKE '%la%' OR ename LIKE '%lA%' OR ename LIKE '%La%' OR ename LIKE '%LA%';
+
+
+10. insa 테이블에서 남자는 'X', 여자는 'O' 로 성별(gender) 출력하는 쿼리 작성   
+    NAME                 SSN            GENDER
+    -------------------- -------------- ------
+    홍길동               771212-1022432    X
+    이순신               801007-1544236    X
+    이순애               770922-2312547    O
+    김정훈               790304-1788896    X
+    한석봉               811112-1566789    X 
+    [2] NULLIF()
+    SELECT name, ssn
+   , NVL2( NULLIF(  MOD( SUBSTR(ssn, 8,1) , 2 ), 1 ), 'O', 'X') gender
+FROM insa;
+
+-- [ NULLIF(첫값, 두값) 설명 ]
+--   첫값 == 두값      NULL을 반환
+--   첫값 != 두값      첫값을 반환
+select ename,job
+    , lengthb(ename),lengthb(job)
+    , NULLIF(lengthb(ename),lengthb(job)) nullif_result
+from emp 
+where deptno=20;
+--
+SELECT name
+    , LENGTH(name)
+    , LENGTHB(name)
+FROM insa;
+
+
+    [1]
+SELECT t.name, t.ssn
+    --, t.gender
+    -- , IF문  PL/SQL
+    , REPLACE( REPLACE( t.gender, 1, '남자' ), 0 , '여자') gender
+FROM (  -- INLINE VIEW(인라인뷰)
+        SELECT name, ssn
+            , MOD(  SUBSTR( ssn, 8,1), 2 )  gender
+        FROM insa
+    ) t;    
+
+
+SELECT *
+FROM emp
+WHERE REGEXP_LIKE( ename , 'king', 'i');
+WHERE ename = UPPER('king');
+
+11.  insa 테이블에서 출생지역이 수도권 아닌 사원의 정보를 조회.
+  ( 수도권 ? 서울,인천,경기    )
+  
+  SELECT *
+FROM insa
+WHERE city NOT IN ('서울','경기','인천');
+WHERE NOT ( city = '서울' OR  city = '경기' OR  city = '인천');
+WHERE city != '서울' AND  city != '경기' AND  city != '인천';
+WHERE city  IN ('서울','경기','인천');
+WHERE city = '서울' OR  city = '경기' OR  city = '인천';
+  
+12. dept 테이블에   deptno = 50,  dname = QC,  loc = SEOUL  로 새로운 부서정보 추가   
+INSERT INTO dept (deptno, dname,loc) VALUES (50, 'QC', 'SEOUL');
+
+-- ORA-00984: column not allowed here
+-- INSERT INTO 스키마.테이블명 [(컬럼명...)] VALUES (컬럼값...);
+-- '날짜', '문자열'
+INSERT INTO dept (deptno, dname,loc) VALUES (50, "QC", "SEOUL");
+
+
+12-2. dept 테이블에 QC 부서를 찾아서 부서명(dname)과 지역(loc)을 
+  dname = 현재부서명에 2를 추가,  loc = POHANG 으로 수정
+  
+  UPDATE dept
+  -- SET dname = dname || '2', loc = 'POHANG'
+  SET dname = CONCAT( dname , '2'), loc = 'POHANG'
+  WHERE dname = 'QC';
+  
+  
+12-3. deptno =50 인 부서의 dname, loc 의 컬럼값을  deptno=20의 dname,loc 값으로 수정
+ UPDATE dept 
+  SET ( dname , loc  ) = (SELECT dname,loc FROM dept WHERE deptno=20)
+  WHERE deptno =50;
+  
+  DML(insert, update, delete) + COMMIT, ROLLBACK
+
+12-4. deptno =50 인 부서 삭제
+DELETE FROM dept
+WHERE deptno = 50;
+COMMIT;
+
+13. insa 테이블에서 2000년 이후 입사자 정보 조회하는 쿼리 작성
+    ㄱ. TO_CHAR() 함수 사용해서 풀기
+    ㄴ. EXTRACT() 함수 사용해서 풀기.
+    
+    NAME                 IBSADATE
+    -------------------- --------
+    이미성               00/04/07
+    심심해               00/05/05
+    권영미               00/06/04
+    유관순               00/07/07    
+
+DESC insa;
+-- IBSADATE NOT NULL DATE
+SELECT name, ibsadate
+    -- , '98/10/11'  ->  '1998.10.11'
+    -- , TO_CHAR(날짜,형식)
+    -- , TO_CHAR(ibsadate,'YYYY.MM.DD(DY)')
+     , TO_CHAR(ibsadate,'YYYY')
+FROM insa
+WHERE ibsadate >= '2000.01.01';
+--WHERE TO_CHAR(ibsadate,'YYYY') >= 2000;
+--WHERE EXTRACT(YEAR FROM ibsadate) >=2000;
+
+
+14. 현재 시스템의 날짜 출력하는 쿼리를 작성하세요. 
+    SELECT ( ㄱ ), ( ㄴ ) 
+    FROM dual;
+    
+    SELECT SYSDATE, CURRENT_TIMESTAMP
+    FROM dual;
+
+-- 2:00 수업시작~~
+15. insa 테이블에서  주민번호를 아래와 같이 '-' 문자를 제거해서 출력
+ 
+    NAME    SSN             SSN_2
+    홍길동	770423-1022432	7704231022432
+    이순신	800423-1544236	8004231544236
+    이순애	770922-2312547	7709222312547 
+    
+    -- REPLACE() 함수 
+SELECT name, ssn
+--  , SUBSTR( ssn, 1, 6)
+--  , SUBSTR( ssn, 8)
+  , CONCAT(  SUBSTR( ssn, 1, 6), SUBSTR( ssn, 8) ) ssn
+--  , REPLACE( ssn , '-', '' ) ssn
+  , REPLACE( ssn , '-' ) ssn
+FROM insa;
+
+16. 문자열 '2024' 를 날짜형으로 변환해서 출력하세요.
+16-2. 문자열 '2024/03' 를 날짜형으로 변환해서 출력하세요.
+16-2. 문자열 '2024/05/21' 를 날짜형으로 변환해서 출력하세요.
+
+--
+SELECT 
+       TO_DATE( '2024' , 'YYYY' )  -- 24/02/01
+     , TO_DATE('2024/03', 'YYYY/MM') -- 24/03/01
+     , TO_DATE( '2024/05/21' )
+FROM dual;
+
+17. LIKE 연산자에 대해서 설명하세요. 
+  ( ESCAPE 옵션에 대해서도 설명 )
+  %, _  으로 패턴 검색을 하면 와일드 카드로 인식-> 일반문자로 인식시키기 위해서
+  ESCAPE 옵션을 사용한다.
+  예) 부서명 : QC100%T,   한글_나라
+  
+  WHERE dname LIKE '%\_%' ESCAPE '\';
+  WHERE dname LIKE '%\%%' ESCAPE '\';
+
+18. insa 테이블에서 성이   김씨, 이씨 인 70년대 12월생의 사원만 조회.
+SELECT name, ssn      
+FROM insa
+WHERE REGEXP_LIKE(name, '^[김이]') AND REGEXP_LIKE(ssn, '^7\d12');
+WHERE REGEXP_LIKE(name, '^(김|이)') ;
+WHERE REGEXP_LIKE(name, '^(김|이)') AND ssn LIKE '7_12%' ;
+WHERE REGEXP_LIKE(name, '^[김이]');
+       

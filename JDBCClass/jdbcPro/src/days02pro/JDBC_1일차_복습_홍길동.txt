@@ -1,0 +1,11 @@
+[문제]
+
+ - emp,dept,salgrade 테이블을 사용해서
+   ename으로 검색하여 
+   ArrayList<> 에 저장하여 
+   dispEmpList(ArrayList<> list) 메서드를 선언하여 출력하는 코딩을 하세요.
+ - empno, dname, ename, hiredate, pay, grade 컬럼 출력.   
+ - 검색결과가 없는 경우 
+    "사원이 존재하지 않습니다." 라고 출력
+       
+ com.util.DBConn.java       
