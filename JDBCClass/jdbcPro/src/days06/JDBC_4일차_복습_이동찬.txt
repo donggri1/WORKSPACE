@@ -1,0 +1,68 @@
+[문제]
+
+Ex01.java 게시판 프로그램 시작부터 검색 처리 후 
+결과 출력까지 모든 과정을 클래스 및 호출 메서드 
+그리고 리턴값을 사용해서 상세히 설명하세요.. 
+
+
+메인 생성
+,db에 연결하고 daoImpl에 conn을 입력받아 dao 객체를 생성한다
+dao 입력받아 service객체생성
+컨트롤러객체생성 보드스타트
+,컨트롤보드 생성
+,객체를 지정해줄 BOARDDTO, 생성
+데이터에 접근하기위한 dao생성
+, dao의 기능 daoimp에 추가
+필요한기능 service클래스에 생성 
+컨트롤클래스에서 service 이용 여기에서 값을 입력받고 출력기능도한다.
+
+Ctrl+F11(실행)
+(1)Ex01.main(){
+
+DBConn conn = new();
+BD dao = new BD(conn);
+BS service = new BS(dao);
+BC controller = new BC(service);
+controller.boardStart();->
+
+
+	(2) controller.boardStart();->
+	
+	(3)	while(true){
+		 메뉴출력()
+		메뉴선택()	 ? selectedNumber= 5
+		메뉴처리()	 case 5:
+			
+		}			(4) 검색하기();
+						검색조건	입력
+						검색어	입력
+						ArrayList<BoardDTO> list
+						출력
+						(5) ArrayList<BoardDTO> service.searchService(searchcondition,searchword);
+										ㄱ.로그기록
+										ㄴ.DB처리
+											(6)dao.saerch(sc,sw);
+												return ArrayList<BoardDTO>dao.search.list;
+				일시정지();								
+					
+
+}
+
+
+
+
+
+
+( 즉, 시퀀스 다이어그램을 작성하세요 )
+
+UML(Unified Modeling Language, 통합 모델링 언어)의 
+시퀀스 다이어그램? 
+특정 Use Case에 대한 상세한 흐름이나 
+심지어는 
+특정 Use Case의 일부분까지도 보여준다. 
+시퀀스에서 다른 객체들 간의 호출관계를 보여주고 있고, 
+다른 객체들로의 다른 호출까지 상세하게 보여줄 수 있다.
+)
+
+ 
+		  

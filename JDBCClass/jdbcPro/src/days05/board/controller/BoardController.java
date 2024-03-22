@@ -16,6 +16,11 @@ public class BoardController {
 	private Scanner scanner = null;
 	private int selectedNumber ; 
 	private BoardService service;
+	//페이징 처리 필요한 필드 선언
+	private int currentPage = 1;
+	private int numberPerPage = 10;
+	// [1] 2 3 4 5 6 7 8 9 10 >
+	private int numberOfPageBlock = 10;
 
 	public BoardController() {
 		super();
@@ -70,18 +75,25 @@ public class BoardController {
 	}
 
 	private void 검색하기() {
-
 		System.out.print(
 				"> 검색 조건 : 제목(1) , 내용(2), 작성자(3), 제목+내용(4) 선택  ? ");
 		int searchCondition = this.scanner.nextInt();
 		System.out.print("> 검색어 입력 ? ");
 		String searchWord = this.scanner.next();
-		
-		//목록보기 복사
-		System.out.println("> 현재 페이지번호를 입력 ? ");
+
+		// 목록보기 코딩 복+붙
+		System.out.print("> 현재 페이지번호를 입력 ? ");
 		this.currentPage = this.scanner.nextInt();
 
-		ArrayList<BoardDTO> list = this.service.searchService(searchCondition,searchWord);
+		ArrayList<BoardDTO> list = 
+				this.service.searchService(
+						searchCondition
+						, searchWord
+						, this.currentPage
+						, this.numberPerPage
+						);
+		
+		
 
 		// 뷰(View)-출력담당
 		System.out.println("\t\t\t  게시판");
@@ -89,24 +101,27 @@ public class BoardController {
 		System.out.printf("%s\t%-40s\t%s\t%-10s\t%s\n", 
 				"글번호","글제목","글쓴이","작성일","조회수");
 		System.out.println("-------------------------------------------------------------------------");
-		if (list==null) {
-			System.out.println("\t\t> 게시글 존재 X");
+		if (list == null) {
+			System.out.println("\t\t> 게시글 존재 X");	
 		} else {
 			Iterator<BoardDTO> ir = list.iterator();
 			while (ir.hasNext()) {
-				BoardDTO dto= ir.next();
+				BoardDTO dto =  ir.next();
 				System.out.printf("%d\t%-30s  %s\t%-10s\t%d\n",
 						dto.getSeq(), 
 						dto.getTitle(),
 						dto.getWriter(),
 						dto.getWritedate(),
-						dto.getReaded());   
-			}
+						dto.getReaded());	
+			} // while
 		}
 		System.out.println("-------------------------------------------------------------------------");
-		System.out.println("\t\t\t [1] 2 3 >"); 
+		//  System.out.println("\t\t\t [1] 2 3 >");
+		String pageblock = this.service.pageService(
+				currentPage, numberPerPage, numberOfPageBlock
+				, searchCondition, searchWord );
+		System.out.println( pageblock ); 
 		System.out.println("-------------------------------------------------------------------------");
-		
 	}
 		
 		
@@ -198,14 +213,15 @@ public class BoardController {
 		일시정지();
 	}
 
-	//페이징 처리 필요한 필드 선언
-	private int currentPage = 1;
 
+	
+	
 	private void 목록보기() {
 		System.out.println("> 현재 페이지번호를 입력 ? ");
 		this.currentPage = this.scanner.nextInt();
 
-		ArrayList<BoardDTO> list = this.service.selectService();
+		ArrayList<BoardDTO> list = 
+				this.service.selectService(currentPage,this.numberPerPage);
 
 		// 뷰(View)-출력담당
 		System.out.println("\t\t\t  게시판");
@@ -228,7 +244,8 @@ public class BoardController {
 			}
 		}
 		System.out.println("-------------------------------------------------------------------------");
-		System.out.println("\t\t\t [1] 2 3 4 5 6 7 8 9 10 >"); 
+		String pageblock = this.service.pageService(currentPage, numberPerPage, numberOfPageBlock);
+		System.out.println(pageblock); 
 		System.out.println("-------------------------------------------------------------------------");
 	}
 

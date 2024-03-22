@@ -1,0 +1,9 @@
+package test;
+
+public class BoardDAOImplTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}

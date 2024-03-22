@@ -21,7 +21,7 @@ public class BoardService {
 	public void setDao(BoardDAO dao) {
 		this.dao = dao;
 	} 
-	
+
 	public BoardDAO getDao() {
 		return dao;
 	}
@@ -133,7 +133,7 @@ public class BoardService {
 
 	// 6. 게시글 검색 서비스
 	public ArrayList<BoardDTO> searchService
-			(int searchCondition, String searchWord) {
+	(int searchCondition, String searchWord) {
 		ArrayList<BoardDTO> list = null;
 
 		// 1. DB 처리
@@ -143,12 +143,111 @@ public class BoardService {
 			e.printStackTrace(); // BoardDAO.selectService() 예외 발생..
 		}
 
-		
+
 		// 2. 로그 기록
 		System.out.println("> 게시글 검색 조회 : 로그 기록 작업...");
 
 		return list;
 	}
+
+	public ArrayList<BoardDTO> selectService(int currentPage, int numberPerPage) {
+		ArrayList<BoardDTO> list = null;
+
+		// 1. DB 처리
+		try {
+			list = this.getDao().select(currentPage,numberPerPage);
+		} catch (SQLException e) { 
+			e.printStackTrace(); // BoardDAO.selectService() 예외 발생..
+		}
+
+		// 2. 로그 기록
+		System.out.println("> 게시글 목록 조회 : 로그 기록 작업...");
+
+		return list;
+	}
+
+	//"[1 start ] 2 3 4 5 6 7 8  페이징 처리 문자열로 반환하는 메서드
+	public String pageService(int currentPage,int numberPerPage,int numberOfPageBlock ) {
+		String pageblock ="\t\t\t";
+
+		int totalPages = 0;
+
+		try {
+			totalPages = this.dao.getTotalPages(numberPerPage);
+
+			int start= (currentPage-1)/numberOfPageBlock*numberPerPage+1;
+			int end = start+numberOfPageBlock-1;
+
+			if(end>totalPages) end = totalPages;
+
+
+			if(start!=1) pageblock+=" < ";
+			for (int i = start; i <= end; i++) {
+				pageblock += String.format(i==currentPage?"[%d] ":"%d ", i);			
+			}
+			if (end !=totalPages) System.out.println(" > ");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return pageblock;
+	}
+	//6-2 페이징처리
+	public ArrayList<BoardDTO> searchService(int searchCondition, String searchWord
+			, int currentPage,int numberPerPage) {
+
+		ArrayList<BoardDTO> list = null;
+
+
+		try {
+			list = this.dao.search(
+					searchCondition,searchWord
+					,currentPage,numberPerPage
+					);
+		} catch (SQLException e) { 
+			e.printStackTrace(); 
+		}
+
+		System.out.println("> 게시글 검색 +페이징 처리 O: 로그 기록 작업...");
+
+		return list;
+	}
+
+
+
+	public String pageService(int currentPage, int numberPerPage, int numberOfPageBlock, int searchCondition,
+			String searchWord) {
+		String pageblock ="\t\t\t";
+
+		int totalPages = 0;
+
+		try {
+			totalPages = this.dao.getTotalPages(numberPerPage
+					,searchCondition,searchWord);
+
+			int start= (currentPage-1)/numberOfPageBlock*numberPerPage+1;
+			int end = start+numberOfPageBlock-1;
+
+			if(end>totalPages) end = totalPages;
+
+
+			if(start!=1) pageblock+=" < ";
+			for (int i = start; i <= end; i++) {
+				pageblock += String.format(i==currentPage?"[%d] ":"%d ", i);			
+			}
+			if (end !=totalPages) System.out.println(" > ");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return pageblock;
+	}
+
+
+
+
 
 }//class
 

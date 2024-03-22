@@ -1,0 +1,72 @@
+package test;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+import com.util.DBConn;
+
+import days05.board.domain.BoardDTO;
+import days05.board.persistence.BoardDAO;
+import days05.board.persistence.BoardDAOImpl;
+import days05.board.service.BoardService;
+
+public class BoardServiceTest {
+
+
+	
+	@Test
+	void testSelectService() {
+		
+		Connection conn = DBConn.getConnection();
+	
+		BoardDAO dao = new BoardDAOImpl(conn);
+		
+		try {
+			ArrayList<BoardDTO> list = dao.Select();
+			System.out.println("사원수 : " + list.size()+ " 명");
+			System.out.println("보드컬럼 : " + list.toString());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		DBConn.close();
+	}
+	
+	
+	/*
+	@Test
+	void testInsertService() {
+		BoardDTO dto = BoardDTO.builder()
+				.title("예비군 훈련")
+				.writer("김영진")
+				.pwd("1234")
+				.email("kim@ss.com")
+				.tag(0)
+				.content("결석")
+				.build();
+		Connection conn = DBConn.getConnection();
+		BoardDAO dao = new BoardDAOImpl(conn);
+		BoardService service = new BoardService(dao);
+		int rowCount =0;
+		try {
+			rowCount =  service.insertService(dto);
+			if (rowCount ==1 ) {
+				System.out.println("게시글 작성 완료");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBConn.close();	
+		}
+		
+		System.out.println(" end ");
+	}
+	*/
+	
+	
+
+}//class

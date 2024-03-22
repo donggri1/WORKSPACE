@@ -1,0 +1,10 @@
+
+3월 22, 2024 15:10:32.367 NEW SESSION
+3월 22, 2024 15:10:32.367 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3월 22, 2024 15:11:52.138 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3월 22, 2024 15:59:13.788 [464:13048:0322/155913.787:ERROR:interface_endpoint_client.cc(707)] Message 1 rejected by interface blink.mojom.WidgetHost
+3월 22, 2024 17:09:17.992 [464:12892:0322/170917.991:ERROR:cert_verify_proc_builtin.cc(874)] CertVerifyProcBuiltin for toplabor.co.kr failed:
+3월 22, 2024 17:09:17.993 ----- Certificate i=0 (O=My Company Ltd,L=Newbury,ST=Berkshire,C=GB) -----
+3월 22, 2024 17:09:17.993 ERROR: No matching issuer found
+3월 22, 2024 17:09:17.993 
+3월 22, 2024 17:09:17.993 

@@ -1,0 +1,21 @@
+package days05;
+
+public class Ex03_02 {
+
+
+	public static void main(String[] args) {
+	
+		int currentPage =1;
+		int numberPerPage = 10;
+		int numberOfPageBlock = 10;
+		
+		// 페이징 블럭 : [1] 2 3 4 5 6 7 8 9 10 >
+		
+		// 1) 총 게시글 수 ? 152
+		
+		
+		
+		
+		
+	}//main
+}//class

@@ -1,0 +1,31 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+import com.util.DBConn;
+
+import domain.EmpVO;
+import persistence.EmpDAO;
+import persistence.EmpDAOImpl;
+
+class EmpDAOImplTest {
+
+	@Test
+	void test() {
+		Connection conn = DBConn.getConnection();
+		EmpDAO dao = new EmpDAOImpl(conn);
+		
+		ArrayList<EmpVO> list = dao.getEmpSelect();
+		System.out.println("사원수 : " + list.size() + "명");
+		
+		DBConn.close();
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package days05.board.service;
+
+public class BoardService {
+
+}

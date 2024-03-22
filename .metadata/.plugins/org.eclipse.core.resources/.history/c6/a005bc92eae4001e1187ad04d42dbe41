@@ -1,0 +1,264 @@
+package days02;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+import com.util.DBConn;
+
+import domain.DeptVO;
+
+// dept 부서 테이블에 추가, 수정, 삭제, 조회
+//					(CRUD)
+public class Ex02 {
+
+	public static String [] menu = {"추가","수정","삭제","조회","종료"};
+	public static int selectedNumber;
+	public static Connection conn;
+	private static Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) {
+		//1. DB 사용할 작업
+		conn = DBConn.getConnection();
+
+		do {
+			메뉴출력();
+			메뉴선택();			
+			메뉴처리();
+
+		} while (true);
+
+
+
+
+	}//main
+
+	private static void 메뉴처리() {
+
+
+
+
+		switch (selectedNumber) {
+		case 1: // 추가
+			부서추가();
+
+			break;
+		case 2:// 수정
+			부서수정();
+
+			break;
+
+		case 3:
+
+			break;
+
+		case 4:// 조회
+			부서조회();
+
+
+			break;
+
+		case 5:// 종료
+			프로그램종료();
+			break;
+
+		default:
+			break;
+		}
+
+		일시정지();
+	}
+
+	private static void 부서수정() {
+
+		System.out.print("> 수정할 부서번호,부서명,지역명 입력하세요 ?");
+
+		int deptno =scanner.nextInt();
+		String dname = scanner.next();
+		String loc = scanner.next();
+		
+		String sql =String.format(
+				"UPDATE  dept "
+				+"SET dname= '%s',loc = '%s'"
+				+"WHERE deptno =%d",dname,loc,deptno);
+		System.out.println(sql); //실행쿼리 확인하기
+		Statement stmt =null;
+
+		try {
+ 
+			stmt = conn.createStatement();
+			//select -> stmt.executeQuery()
+			//i,u,d  -> stmt.executeupdate()
+			int rowCount = stmt.executeUpdate(sql);
+
+			if (rowCount==1) {
+				System.out.println("부서 수정 성공!!!");
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+
+		
+	}
+
+	private static void 부서추가() {
+		System.out.print("> 부서번호,부서명,지역명 입력하세요 ?");
+		int deptno =scanner.nextInt();
+		String dname = scanner.next();
+		String loc = scanner.next();
+		String sql =String.format(
+				"INSERT INTO dept (deptno,dname,loc)"
+						+"VALUES (%d,'%s','%s')",deptno,dname,loc);
+		System.out.println(sql); //실행쿼리 확인하기
+		Statement stmt =null;
+
+		try {
+			//conn.setAutoCommit(true); default 값임 커밋 자동설정 
+			stmt = conn.createStatement();
+			//select -> stmt.executeQuery()
+			//i,u,d  -> stmt.executeupdate()
+			int rowCount = stmt.executeUpdate(sql);
+
+			if (rowCount==1) {
+				System.out.println("부서 추가 성공!!!");
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+
+
+
+
+	}
+
+	private static void 일시정지() {
+		System.out.println("엔터치면 계속합니다.");
+		try {
+			System.in.read();
+
+			System.in.skip(System.in.available());
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+	private static void 부서조회() {
+
+		ArrayList<DeptVO> list = null;
+		ResultSet rs = null;
+		Statement stmt = null;
+		String sql = "SELECT *"
+				+"FROM dept";
+
+		System.out.println(sql); //실행쿼리 확인하기
+		int deptno;
+		String dname,loc;
+
+		DeptVO vo = null;
+
+		try {
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+
+				list = new ArrayList<DeptVO>();
+				do {
+					deptno = rs.getInt("deptno");
+					dname = rs.getString("dname");
+					loc = rs.getString("loc");
+					vo = new DeptVO(deptno, dname, loc);
+					list.add(vo);
+				} while (rs.next());
+				부서출력(list);
+
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				stmt.close();
+				rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	private static void 부서출력(ArrayList<DeptVO> list) {
+
+		Iterator<DeptVO> ir = list.iterator();
+		System.out.println("-".repeat(30));
+		System.out.printf("deptno\tdname\tloc\n");
+		System.out.println("-".repeat(30));
+		while (ir.hasNext()) {
+			DeptVO vo =  ir.next();
+			System.out.printf("%d\t%s\t%s\n",vo.getDeptno(),vo.getDname(),vo.getLoc());
+
+		}
+		System.out.println("-".repeat(30));
+	}
+
+
+	private static void 프로그램종료() {
+		//1. DB 닫기
+		DBConn.close();
+		//1-2. 스캐너 닫기
+		scanner.close();
+		//2. 종료 메시지 출력
+		System.out.println("프로그램 종료!!");
+		System.exit(-1);
+	}
+
+	private static void 메뉴선택() {
+
+		//		try (Scanner scanner = new Scanner(System.in)) 
+		try{ 
+			System.out.print(">메뉴 선택하세요 ?");
+			selectedNumber = scanner.nextInt();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+	private static void 메뉴출력() {
+
+		System.out.printf("[메뉴]\n");
+		for (int i = 0; i < menu.length; i++) {
+
+			System.out.printf("%d. %s\n",i+1,menu[i]);
+		}//for 
+
+	}
+
+}//class

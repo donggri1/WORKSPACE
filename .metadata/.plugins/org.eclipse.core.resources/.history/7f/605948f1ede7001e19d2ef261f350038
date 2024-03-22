@@ -1,0 +1,44 @@
+package days05;
+
+public class Ex03_02 {
+
+
+	public static void main(String[] args) {
+	
+//		int currentPage =1;
+		int numberPerPage = 10;
+		int numberOfPageBlock = 10;
+		
+		// currentPage =1    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =2    1 [2] 3 4 5 6 7 8 9 10 >
+		// currentPage =3    1 2 [3] 4 5 6 7 8 9 10 >
+		// currentPage =4    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =5    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =6    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =7    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =1    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =1    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =1    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =1    [1] 2 3 4 5 6 7 8 9 10 >
+		// currentPage =1    1 2 3 4 5 6 7 8 9 [10] >
+		
+		
+		// currentPage =11    [11] 12 13 14 15 16 >
+		
+		// 1) 총 게시글 수 ? 152
+		// 2) 총 페이지 수 ? 16
+		for (int currentPage = 1; currentPage <= 16 ; currentPage++) {
+			int start = 1;
+			int end = 10;
+			
+			start= (currentPage-1)/numberOfPageBlock*numberPerPage+1;
+			System.out.printf("currentPage =%d start=%d end %d\n"
+					,currentPage,start,end);	
+		}
+		
+		
+		
+		
+		
+	}//main
+}//class
