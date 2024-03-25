@@ -6,7 +6,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/E/Class/WorkSpace/JDBCClass/jdbcPro/lombok.jar">
+=======
+	<classpathentry kind="lib" path="C:/E/Class/Workspace/JDBCClass/jdbcPro/lombok.jar">
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

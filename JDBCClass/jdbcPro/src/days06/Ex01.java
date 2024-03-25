@@ -1,5 +1,6 @@
 package days06;
 
+<<<<<<< HEAD
 import java.lang.reflect.Array;
 import java.util.Iterator;
 
@@ -33,3 +34,36 @@ public static void main(String[] args) {
 }//main
 
 }//class
+=======
+public class Ex01 {
+	public static void main(String[] args) {
+
+		String my_string = "string";
+
+		int k =3;
+
+		String answer =  solution(my_string, k);
+		System.out.print(answer);
+		
+		for (int i = 1; i < k; i++) {
+			
+			my_string +=my_string;
+			
+		}
+
+	}
+
+	public static String solution(String my_string, int k) {
+		String answer = "";
+		
+		for (int i = 0; i < k; i++) {
+			System.out.print(my_string);
+			
+		}
+		
+		
+		return answer;
+	}
+
+}
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb

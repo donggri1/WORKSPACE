@@ -25,5 +25,11 @@ public class BoardDTO {
 	private String content;
 	
 
+<<<<<<< HEAD
+=======
+	        
+	
+	
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb
 
 }
