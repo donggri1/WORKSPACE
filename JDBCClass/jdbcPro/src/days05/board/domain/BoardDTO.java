@@ -25,8 +25,5 @@ public class BoardDTO {
 	private String content;
 	
 
-	        
-	
-	
 
 }

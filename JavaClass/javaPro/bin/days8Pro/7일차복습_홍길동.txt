@@ -1,0 +1,201 @@
+1. 함수(메서드)의 정의
+   반복적인 코딩 + 묶음 => 재사용, 관리용이
+
+2. 함수(메서드)를 선언하세요..
+
+   ㄱ. 함수 선언 형식
+   ㄴ. 함수 호출 사용, 선언 3가지 사항 이해
+      (1) 기능(일)  getScore
+      (2) 매개변수
+      (3) 리턴값(리턴자료형)
+
+ 
+  1) 0~100 사이의  점수를 키보드로 부터 입력받아서 
+    유효성 검사를 한 점수를 반환하는 함수 선언
+    
+    public static int getScore(){
+       Scanner scanner = new Scanner(System.in);
+       String strScore = scanner.next();
+       // 정규표현식 유효성 검사 체크
+       int score = Integer.pareseInt( strScore );
+       return score;
+    }   
+    
+    // 10:01 수업 시작~ 
+  2) 점수를 매개변수로 받아서 수우미양가 문자를 반환하는 함수 선언
+  
+  public static char getGrade(int score){
+  
+         // if, switch  
+         
+         char grade = '수';
+         
+         return garde;
+  }
+  
+  3) 정수를 가변 매개변수(인자)로 받아서 합을 반환하는 함수 선언
+  
+  public static int sum(int...args){
+     // int [] args -> 람다스트림 변환
+     //                IntStream    of(배열)
+     return  IntStream.of(args).sum();
+  }
+  
+  4) 한 문자를 매개변수로 받아서 대문자로 바꿔서 반환하는 함수 선언
+  public static char toUpperCase(char one){
+     if( Character.isLowerCase(one) ){ 
+        // return (char)(one - 32);
+        return Character.toUpperCase(one);
+     }
+     return one; 
+  }
+  
+  public static void main(String[] args) {
+
+		try (Scanner scanner = new Scanner(System.in)) {
+			int kor = getScore(scanner, "국어");
+			
+			// 국어점수의 등급을 출력.
+			char grade = getGrade(kor);
+			System.out.printf("> kor=%d, grade=%c\n", kor, grade);
+			
+			//int eng = getScore(scanner, "영어");
+			//int mat = getScore(scanner, "수학");
+			//System.out.printf("> kor=%d, eng=%d, mat=%d\n" ,kor, eng, mat);
+
+		} catch (Exception e) {
+			e.printStackTrace(); 
+		} // catch
+
+
+	} // main
+
+	public static char getGrade(int score) {
+		char grade = '가';
+		
+		switch (score/10) {
+			case 10: case 9: grade='수'; break;
+			case 8: grade='우'; break;
+			case 7: grade='미'; break;
+			case 6: grade='양';  break; 
+		} // switch
+		
+		return grade;
+	}
+
+	// 
+	public static int getScore(Scanner scanner, String subject) {
+		int score = 0;
+		boolean flag = false;
+		String inputData;
+		String regex = "100|[1-9]?\\d";
+
+
+		// 10:01 수업 시작~
+		do {
+			if( flag ) {
+				System.out.println(">> 점수 입력 잘못(0~100). 다시");					
+			}
+			System.out.printf("> %s점수 입력하세요? ", subject);
+			inputData = scanner.next();
+
+			flag = true;				
+		} while ( !inputData.matches(regex) );
+
+		score =  Integer.parseInt(inputData) ; 
+
+		return score;
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println( sum(1,2,3) );
+		System.out.println( sum(1,2,3,4,5,6) );
+		System.out.println( sum(new int[] {1,2}) );
+		
+		char one = 'x';
+		char upperOne = myUpperCase(one);
+		System.out.println( upperOne );
+
+	} //main
+
+	public static char myUpperCase(char one) {
+		
+		if ('a' <= one && one <= 'z'  ) {
+			one = (char)(one-32);
+		} // if
+		return one;
+		
+		// 11:03 수업 시작~
+		
+		/*
+		// char UpperCaseOne = one;
+		//return Character.toUpperCase(one);
+		if (Character.isLowerCase(one)) {
+			// UpperCaseOne = Character.toUpperCase(one);
+			one = Character.toUpperCase(one);
+		} // if
+		
+		return one;
+		*/
+	}
+
+	public static int sum( int...args ) {
+		int result = 0;
+		/*
+		for (int i = 0; i < args.length; i++) {
+			result  += args[i]; 
+		} // for
+		*/
+		
+		// foreach문( 확장for문 )
+		for (int i : args) {
+			result += i;
+		} // foreach
+		return result;
+	}
+	
+
+3. 오버로딩(overloading)에 대해서 설명하세요. 
+   
+   선 긋기 ( drawLine () )
+   선 긋기 ( drawLine (int n) )
+   선 긋기 ( drawLine (int n, String style) ) 
+   
+   리턴자료형 X
+   매개변수 타입, 갯수 
+   =>  동일한 이름으로 매개변수 타입, 갯수  다르게 함수를 중복 선언한 것.(중복함수)  
+   
+4. 피보나치 수열의 항이 <=100 까지의 합을 출력(수업) 
+   ( while 조건반복문사용 ) 
+
+
+
+   
+5. 피보나치 수열의 10개 항의 합을 출력 - for 문사용.
+  1+1+2+3+5+8+13+21+34+55 =143
+
+// 1+1+2+3+5+8+13+21+34+55+=143
+		int firstTerm = 1;  // 첫 번째 항
+		int secondTerm = 1; // 두 번째 항
+		int nextTerm;
+		int sum = firstTerm + secondTerm;
+		System.out.printf("%d+%d+",firstTerm, secondTerm);
+		
+		for (int i = 1; i <= 8; i++) {
+			nextTerm = firstTerm + secondTerm;
+			System.out.printf("%d+", nextTerm);
+			sum += nextTerm;
+			firstTerm = secondTerm;
+			secondTerm = nextTerm;
+		} // for
+		 
+		System.out.printf("=%d\n", sum);  
+  
+  
+  
+  
+  
+  
+  
+  
