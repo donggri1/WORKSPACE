@@ -1,0 +1,65 @@
+.mediago-placement_6df7b6 {
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  font-family: "Segoe UI Semilight", "Segoe WP Semilight", "Segoe WP", "Segoe UI", Arial, Sans-Serif;
+  white-space: normal;
+}
+.mediago-placement_6df7b6.imgTopTitleBottom_6df7b6 .mgmgsrcnameadslabelurl_6df7b6 {
+  color: rgba(43, 43, 43, 0.7);
+  display: inline-block;
+  max-width: 18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: text-top;
+  white-space: nowrap;
+}
+.mediago-placement_6df7b6.imgTopTitleBottom_6df7b6 .mediago-placement-track_6df7b6 {
+  width: 100%;
+  height: 100%;
+}
+.mediago-placement_6df7b6.imgTopTitleBottom_6df7b6 .title_6df7b6 {
+  font-weight: bold;
+  max-height: 96px;
+  line-height: 22px;
+  color: #000;
+  margin: 0 3.5px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  padding-top: 6px;
+  width: 292px;
+}
+.mediago-placement_6df7b6.imgTopTitleBottom_6df7b6 .source_6df7b6 {
+  position: absolute;
+  bottom: 4px;
+  color: #c3bdbd;
+  font-size: 10px;
+  line-height: 12px;
+  padding-left: 5px;
+  left: 0px;
+}
+.mediago-placement_6df7b6.imgTopTitleBottom_6df7b6 .source_6df7b6 .sourcename_6df7b6 {
+  position: relative;
+  top: -1px;
+  text-align: center;
+  color: #c3bdbd;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  border: 1px solid #c3bdbd;
+  border-radius: 12px;
+  margin-right: 3px;
+}
+.mediago-placement_6df7b6.imgTopTitleBottom_6df7b6 .source_6df7b6 .mgmgsrcnameadslabelurl_6df7b6 {
+  color: #c3bdbd;
+  line-height: 13px;
+}
+.mediago-placement_6df7b6 a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.mediago-placement_6df7b6 ul {
+  list-style: none;
+}
+

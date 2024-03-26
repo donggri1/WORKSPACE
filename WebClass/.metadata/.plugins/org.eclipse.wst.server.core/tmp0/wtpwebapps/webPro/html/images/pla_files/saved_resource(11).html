@@ -1,0 +1,998 @@
+
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>
+			Object.assign(window, parent.bntIframeVars);
+			var sdkScript = document.createElement('script');
+sdkScript.onload = function() {
+  if (typeof bntInit == 'function') bntInit(); else console.error("bnt: no bntInit()");
+  if (typeof bntStart == 'function') bntStart(); else console.warn("bnt: no bntStart()");
+}
+sdkScript.onerror = function() {
+  throw new Error("bnt: sdk load error");
+}
+sdkScript.src = 'https://s8t.teads.tv/sdk/2022.0.0';
+document.documentElement.firstChild.appendChild(sdkScript);
+var stylesNode = document.createElement('style');
+stylesNode.type = 'text/css';
+stylesNode.appendChild(document.createTextNode(".slideFromRight{animation-name:slideFromRight}@keyframes slideFromRight{from{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromLeft{animation-name:slideFromLeft}@keyframes slideFromLeft{from{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromTop{animation-name:slideFromTop}@keyframes slideFromTop{from{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromBottom{animation-name:slideFromBottom}@keyframes slideFromBottom{from{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.horizontalFlipIn{animation-name:horizontalFlipIn}@keyframes horizontalFlipIn{from{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.verticalFlipIn{animation-name:verticalFlipIn}@keyframes verticalFlipIn{from{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.fadeIn{animation-name:fadeIn}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.zoomIn{animation-name:zoomIn}@keyframes zoomIn{from{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}to{opacity:1}}.slideToRight{animation-name:slideToRight}@keyframes slideToRight{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}}.slideToLeft{animation-name:slideToLeft}@keyframes slideToLeft{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}}.slideToTop{animation-name:slideToTop}@keyframes slideToTop{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}}.slideToBottom{animation-name:slideToBottom}@keyframes slideToBottom{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}}.horizontalFlipOut{animation-name:horizontalFlipOut}@keyframes horizontalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.verticalFlipOut{animation-name:verticalFlipOut}@keyframes verticalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.fadeOut{animation-name:fadeOut}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.zoomOut{animation-name:zoomOut}@keyframes zoomOut{from{opacity:1}to{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}}/*# sourceMappingURL=animations.css.map */[id^=\"Slide\"], [id^=\"Slide\"] * {    transform-style: preserve-3d;} [id^=\"Slide\"] > div > div > div > div {  transform: translateZ(1px) !important;}[id^=\"item\"], [id^=\"Item\"], #Swipe {    transform: translateZ(30px) !important;}[id^=\"Slide\"] > div > div * {  backface-visibility: hidden !important;  -webkit-backface-visibility: hidden !important;}@keyframes flipPreviewY{  0%, 60%, 100% {    transform: rotateY(0deg);  }  64%, 86%{    transform: rotateY(-20deg);  }  72%{    transform: rotateY(20deg);  }}@-webkit-keyframes flipPreviewY{  0%, 60%, 100% {    transform: rotateY(0deg);  }  64%, 86%{    transform: rotateY(-20deg);  }  72%{    transform: rotateY(20deg);  }}@keyframes flipPreviewX{  0%, 60%, 100% {    transform: rotateX(0deg);  }  64%, 86%{    transform: rotateX(-20deg);  }  72%{    transform: rotateX(20deg);  }}@-webkit-keyframes flipPreviewX{  0%, 60%, 100% {    transform: rotateX(0deg);  }  64%, 86%{    transform: rotateX(-20deg);  }  72%{    transform: rotateX(20deg);  }}.previewAnimation {    perspective: 3000px;}.previewAnimation > div {    transform-style: preserve-3d;    animation: flipPreviewY infinite 3s;    perspective: none !important;}\n"));
+document.documentElement.firstChild.appendChild(stylesNode);
+var fontsToPreload = [];
+for(var i = 0;i < fontsToPreload.length; i++) {
+	var el = document.createElement("link");
+	el.setAttribute("rel", "preload");
+	el.setAttribute("as", "font");
+	el.setAttribute("href", fontsToPreload[i]);
+	el.setAttribute("crossorigin", "anonymous");
+	document.documentElement.firstChild.appendChild(el);
+}
+var VAST_PLAYER = 'https://s8t.teads.tv/format/2022.0.0'
+function bntInit() {
+bnt.LIBRARY.swipe_png = {
+  "id": "swipe_png",
+  "link": "https://s8t.teads.tv/creative-6753877077099559/swipe-1581431349283.png",
+  "name": "swipe.png",
+  "size": 27217,
+  "nature": "image",
+  "created": "2024-02-28T08:40:35.638Z",
+  "updated": "2024-02-28T08:40:35.638Z",
+  "external": false,
+  "filename": "swipe-1581431349283.png"
+};;
+bnt.ASSET_VERSIONS.swipe_png = {
+  "700": "https://s8t.teads.tv/creative-6753877077099559/swipe-1581431349283.700.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077099559/swipe-1581431349283.700.png"
+};
+bnt.LIBRARY.________jpg = {
+  "id": "________jpg",
+  "link": "https://s8t.teads.tv/creative-6753877077099559/-1709109320633.jpg",
+  "name": "하루콩.jpg",
+  "size": 171250,
+  "nature": "image",
+  "created": "2024-02-28T08:40:36.003Z",
+  "updated": "2024-02-28T08:40:36.003Z",
+  "external": false,
+  "filename": "-1709109320633.jpg"
+};;
+bnt.ASSET_VERSIONS.________jpg = {
+  "360": "https://s8t.teads.tv/creative-6753877077099559/-1709109320633.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077099559/-1709109320633.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077099559/-1709109320633.720.jpg"
+};
+bnt.LIBRARY.________mp4 = {
+  "id": "________mp4",
+  "link": "https://s8t.teads.tv/creative-6753877077099559/-1709112934644.mp4",
+  "name": "하루콩.mp4",
+  "size": 57278850,
+  "nature": "video",
+  "created": "2024-02-28T09:35:45.009Z",
+  "updated": "2024-02-28T09:35:45.009Z",
+  "external": false,
+  "filename": "-1709112934644.mp4"
+};;
+bnt.ASSET_VERSIONS.________mp4 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077099559/-1709112934644.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077099559/-1709112934644.low.mp4"
+};
+
+uid = 7967;
+cid = "6753877077099559";
+
+creative = bnt.unmarshall([{"ctor":"Creative","paths":[[]],"props":{}},{"ctor":"Array","paths":[["screens"]],"props":{}},{"ctor":"Screen","paths":[["screens","0"]],"props":{"name":"Screen1"}},{"ctor":"Array","paths":[["screens","0","customLoads"]],"props":{}},{"ctor":"Array","paths":[["screens","0","eos"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0"]],"props":{}},{"ctor":"Group","paths":[["screens","0","eos","0","element"]],"props":{"elementId":"FlipCarousel"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"Canvas","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"],["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"],["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"],["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"],["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"],["canvases","0"]],"props":{"uuid":"27473220-9a29-2ac2-aeee-8111eee287fc"}},{"ctor":"CanvasConfig","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas","config"]],"props":{"name":"Custom 1","width":960,"height":540}},{"ctor":"Segment","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"],["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"],["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"],["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"],["segments","0"]],"props":{"uuid":"21c17e94-7f30-c0d0-f04e-20e56ad8579e"}},{"ctor":"Array","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"GroupConfig","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"width":960,"height":540,"visible":true}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"GroupConfig","paths":[["screens","0","eos","0","element","baseConfig"]],"props":{"x":0,"y":0,"width":0,"height":0,"visible":true}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0","element","eos","0"]],"props":{}},{"ctor":"Group","paths":[["screens","0","eos","0","element","eos","0","element"]],"props":{"elementId":"Slide1"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","0","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","0","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"GroupConfig","paths":[["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"width":960,"height":540,"visible":true}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"GroupConfig","paths":[["screens","0","eos","0","element","eos","0","element","baseConfig"]],"props":{"x":0,"y":0,"width":0,"height":0,"visible":true}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","0","element","eos"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0","element","eos","0","element","eos","0"]],"props":{}},{"ctor":"Image","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element"]],"props":{"elementId":"SwipePreview"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","0","element","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"Canvas","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"]],"props":{"uuid":"27473220-9a29-2ac2-aeee-8111eee287fc"}},{"ctor":"CanvasConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas","config"]],"props":{"name":"Custom 1","width":720,"height":960}},{"ctor":"Segment","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"]],"props":{"uuid":"21c17e94-7f30-c0d0-f04e-20e56ad8579e"}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"src":"asset://swipe_png","angle":0,"width":100,"height":100,"visible":false,"panActive":false,"hoverImage":"","imageWidth":700,"usePointer":true,"imageHeight":700,"useGyroscope":true,"preserveAspectRatio":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","element","baseConfig"]],"props":{"src":"","angle":0,"width":100,"height":100,"visible":true,"panActive":false,"hoverImage":"","imageWidth":0,"usePointer":true,"imageHeight":0,"useGyroscope":true,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":10,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","0","element","eos","0","interactions"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0","element","eos","0","element","eos","1"]],"props":{}},{"ctor":"Video","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element"]],"props":{"elementId":"MainVideo"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","0","element","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"VideoConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"src":"asset://________mp4","mute":false,"cover":"","width":960,"height":540,"visible":true,"autoplay":true,"panActive":false,"coverWidth":0,"usePointer":true,"videoWidth":960,"coverHeight":0,"videoHeight":540,"useGyroscope":true,"videoDuration":30.03,"preserveAspectRatio":false}},{"ctor":"VideoConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","element","baseConfig"]],"props":{"src":"","mute":false,"cover":"","width":320,"height":180,"visible":true,"autoplay":true,"panActive":false,"coverWidth":0,"usePointer":true,"videoWidth":0,"coverHeight":0,"videoHeight":0,"useGyroscope":true,"videoDuration":0,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","interactions","0","_actionParameters"]],"props":{"0":"https://ad.doubleclick.net/ddm/trackclk/N5295.4347312TEADSKR/B31510307.388761224;dc_trk_aid=580036919;dc_trk_cid=210385540;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1"}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","element","eos","1","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","0","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","0","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","0","baseConfig"]],"props":{}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","0","interactions"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0","element","eos","1"]],"props":{}},{"ctor":"Group","paths":[["screens","0","eos","0","element","eos","1","element"]],"props":{"elementId":"Slide2"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","1","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","1","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","1","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"GroupConfig","paths":[["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"width":960,"height":540,"visible":true}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"GroupConfig","paths":[["screens","0","eos","0","element","eos","1","element","baseConfig"]],"props":{"x":0,"y":0,"width":0,"height":0,"visible":true}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","1","element","eos"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0","element","eos","1","element","eos","0"]],"props":{}},{"ctor":"Image","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element"]],"props":{"elementId":"Image1"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","0","element","eos","1","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"Segment","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"]],"props":{"uuid":"21c17e94-7f30-c0d0-f04e-20e56ad8579e"}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"src":"asset://________jpg","angle":0,"width":960,"height":540,"visible":true,"panActive":false,"hoverImage":"","imageWidth":960,"usePointer":true,"imageHeight":540,"useGyroscope":true,"preserveAspectRatio":false}},{"ctor":"ImageConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","element","baseConfig"]],"props":{"src":"","angle":0,"width":100,"height":100,"visible":true,"panActive":false,"hoverImage":"","imageWidth":0,"usePointer":true,"imageHeight":0,"useGyroscope":true,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","interactions","0","_actionParameters"]],"props":{"0":"https://ad.doubleclick.net/ddm/trackclk/N5295.4347312TEADSKR/B31510307.388761224;dc_trk_aid=580036919;dc_trk_cid=210385540;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1"}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","1","element","eos","0","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Map","paths":[["screens","0","eos","0","element","eos","1","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","eos","1","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","1","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","element","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Object","paths":[["screens","0","eos","0","element","eos","1","baseConfig"]],"props":{}},{"ctor":"Array","paths":[["screens","0","eos","0","element","eos","1","interactions"]],"props":{}},{"ctor":"Map","paths":[["screens","0","eos","0","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Object","paths":[["screens","0","eos","0","baseConfig"]],"props":{}},{"ctor":"Array","paths":[["screens","0","eos","0","interactions"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","1"]],"props":{}},{"ctor":"Shape","paths":[["screens","0","eos","1","element"]],"props":{"elementId":"Shape1"}},{"ctor":"Map","paths":[["screens","0","eos","1","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","1","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","1","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"],["screens","0","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k"]],"props":{}},{"ctor":"Canvas","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas"]],"props":{"uuid":"27473220-9a29-2ac2-aeee-8111eee287fc"}},{"ctor":"CanvasConfig","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","canvas","config"]],"props":{"name":"Custom 1","width":720,"height":960}},{"ctor":"Segment","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment"]],"props":{"uuid":"21c17e94-7f30-c0d0-f04e-20e56ad8579e"}},{"ctor":"Array","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"ShapeConfig","paths":[["screens","0","eos","1","element","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"angle":0,"width":960,"border":0,"height":540,"radius":0,"visible":true,"borderColor":"rgba(255,255,255,1)","backgroundColor":"rgba(255,255,255,1)","preserveAspectRatio":false}},{"ctor":"ShapeConfig","paths":[["screens","0","eos","1","element","baseConfig"]],"props":{"angle":0,"width":100,"border":1,"height":100,"radius":0,"visible":true,"borderColor":"#aaa","backgroundColor":"#ccc","preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","1","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","1","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","1","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","configs","store","27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","1","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","1","interactions"]],"props":{}},{"ctor":"Map","paths":[["screens","0","indexMapping"]],"props":{}},{"ctor":"ElementHash","paths":[["screens","0","indexMapping","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","indexMapping","store"]],"props":{}},{"ctor":"Array","paths":[["screens","0","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","interactions","0"]],"props":{"_action":"trackPixel","fireOnce":true,"triggerName":"onshow","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","interactions","0","_actionParameters"]],"props":{"0":"https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761224;dc_trk_aid=580036919;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?"}},{"ctor":"Object","paths":[["screens","0","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Interaction","paths":[["screens","0","interactions","1"]],"props":{"_action":"trackPixel","fireOnce":true,"triggerName":"onshow","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","interactions","1","_actionParameters"]],"props":{"0":"https://img.macromill.com/imp/us002697ijs/0000741784-img-86"}},{"ctor":"Object","paths":[["screens","0","interactions","1","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Interaction","paths":[["screens","0","interactions","2"]],"props":{"_action":"trackPixel","fireOnce":true,"triggerName":"onshow","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","interactions","2","_actionParameters"]],"props":{"0":"https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761308;dc_trk_aid=580160965;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?"}},{"ctor":"Object","paths":[["screens","0","interactions","2","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Interaction","paths":[["screens","0","interactions","3"]],"props":{"_action":"trackPixel","fireOnce":true,"triggerName":"onshow","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","interactions","3","_actionParameters"]],"props":{"0":"https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761287;dc_trk_aid=580161460;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?"}},{"ctor":"Object","paths":[["screens","0","interactions","3","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Interaction","paths":[["screens","0","interactions","4"]],"props":{"_action":"trackPixel","fireOnce":true,"triggerName":"onshow","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","interactions","4","_actionParameters"]],"props":{"0":"https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761302;dc_trk_aid=580037447;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?"}},{"ctor":"Object","paths":[["screens","0","interactions","4","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ScreenConfig","paths":[["screens","0","config"]],"props":{"duration":"30"}},{"ctor":"AnimationConfig","paths":[["screens","0","config","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","config","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["canvases"]],"props":{}},{"ctor":"Array","paths":[["segments"]],"props":{}},{"ctor":"Map","paths":[["screensToPreload"]],"props":{}},{"ctor":"ScreenHash","paths":[["screensToPreload","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screensToPreload","store"]],"props":{}},{"ctor":"CreativeConfig","paths":[["config"]],"props":{"trackingSamplingLevel":1}},{"ctor":"Object","paths":[["config","options"]],"props":{}},{"ctor":"Code","paths":[["code"]],"props":{"js":"// Checked 29.11.2021 PLEASE DO NOT DELETE THIS LINE\n\nvar config = {\n    screen: Screen1,\n    carouselContainer: FlipCarousel,\n    perspective: 3000,\n    previewElem: SwipePreview,\n    callAnimation: 'previewAnimation',\n    rotateAxis: 'x', // x only on scroll\n    onScroll: true,\n    auto: 3, //only available when onScroll is false. Set number of seconds, or null\n    startAutoAfter: 1, //only available when onScroll is false. Set number of seconds, or null\n    stayOnVideoSlide: false, //set true or false\n    speed: 0.6, //speed in seconds\n\n}\n\nvar flipCarousel = function (config) {\n    this.screen = config.screen;\n    this.container = config.carouselContainer;\n    this.perspective = config.perspective;\n    this.previewImg = config.previewElem;\n    this.animation = config.callAnimation;\n    this.onscroll = config.onScroll;\n    this.stayVideo = false;\n    this.speed = config.speed;\n    if (this.onscroll) this.stayVideo = config.stayOnVideoSlide;\n    this.autoTime = (config.auto >= this.speed || config.auto == null) ? config.auto : this.speed;\n    this.startAutoTime = config.startAutoAfter ? config.startAutoAfter : 0;\n    this.percent = 0;\n    this.spinLoop;\n\n    if (config.rotateAxis == 'x' && this.onscroll) {\n        this.rotateAxis = 'rotateX';\n    } else {\n        this.rotateAxis = 'rotateY';\n    }\n\n    this.interactionsStarted = false;\n    this.activeIndex = 0;\n    this.lastRotation = 0;\n    this.nextIndex = null;\n    this.pairity = true;\n    this.firstInteraction = false;\n    this.spam = false\n\n    this.videoEl = null;\n    this.videoidx = null;\n    this.vidPlaying = false;\n    this.trackedSlides = [0];\n\n    this.slides = this.container.eos.map(function (slide) { return slide.element; });\n\n    this.screen.onshow.addObserver(function () {\n        this.init();\n    }.bind(this))\n\n    this.screen.onhide.addObserver(function () {\n        this.stopLoop();\n    }.bind(this));\n\n    this.init = function () {\n        this.setupContainerPosition();\n        this.setupSlidesPosition();\n        this.checkVideo();\n\n        bntTracking.trackEvent(\"#Slide \" + (this.activeIndex + 1) + ': in view', null);\n\n        if (this.onscroll) {\n            this.loop();\n            this.container.htmlElement.classList.remove(this.animation);\n\n        } else {\n            this.addInteractions();\n\n            if (this.autoTime) {\n                this.startAuto();\n            }\n        }\n    }\n\n    this.startAuto = function () {\n        this.startAuto = setTimeout(function () {\n\n            setTimeout(function () {\n                this.container.htmlElement.classList.remove(this.animation);\n            }.bind(this), this.autoTime * 1000 - 100)\n\n            this.autoInterval = setInterval(function () {\n                this.autoNext();\n            }.bind(this), this.autoTime * 1000)\n\n        }.bind(this), this.startAutoTime * 1000)\n    }\n\n    this.setupContainerPosition = function () {\n        this.rotator = this.container.htmlElement.childNodes[0].childNodes[0];\n        this.rotator.style.transformStyle = 'preserve-3d';\n        this.rotator.style.transition = 'transform ' + this.speed + 's';\n        this.container.htmlElement.childNodes[0].style.perspective = this.perspective + 'px';\n\n        this.container.htmlElement.classList.add(this.animation);\n\n        this.containerWidth = this.container.htmlElement.offsetWidth;\n        this.containerLeft = this.container.htmlElement.offsetLeft;\n\n        this.trueElementLeft = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetLeft + this.slides[0].htmlElement.offsetLeft;\n        this.trueElementWidth = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetWidth;\n\n        this.outlineOffset = this.containerLeft + this.trueElementLeft;\n        if (this.containerWidth > this.trueElementWidth) {\n            this.rotator.style.width = bnt.px(this.trueElementWidth);\n            this.container.htmlElement.style.left = bnt.px(this.outlineOffset);\n            this.containerWidth = this.container.htmlElement.offsetWidth;\n        }\n\n        this.containerHeight = this.container.htmlElement.offsetHeight;\n        this.containerTop = this.container.htmlElement.offsetTop;\n\n        this.trueElementTop = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetTop + this.slides[0].htmlElement.offsetTop;\n        this.trueElementHeight = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetHeight;\n\n        this.outlineOffset = this.containerTop + this.trueElementTop;\n        if (this.containerHeight > this.trueElementHeight) {\n            this.rotator.style.height = bnt.px(this.trueElementHeight);\n            this.container.htmlElement.style.top = bnt.px(this.outlineOffset);\n            this.containerHeight = this.container.htmlElement.offsetHeight;\n        }\n    }\n\n\n    this.setupSlidesPosition = function () {\n        this.slides.forEach(function (el, idx) {\n\n            el.htmlElement.style.backfaceVisibility = 'hidden';\n\n            el.eos.forEach(function (slideElement, slideElement_idx) {\n                let elementId = slideElement.element.elementId.toLowerCase()\n                if (elementId.indexOf(\"item\") != -1)\n                    slideElement.element.htmlElement.style.transform = \"translateZ(30px)\";\n                else\n                    slideElement.element.htmlElement.style.transform = \"translateZ(1px)\";\n            })\n\n            if (el.htmlElement.offsetWidth == this.trueElementWidth) {\n                el.htmlElement.style.left = \"0px\";\n            } else {\n                if (el.eos[el.eos.length - 1].element.htmlElement.offsetLeft > 0) {\n                    el.htmlElement.style.left = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetLeft);\n                    el.htmlElement.style.right = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetLeft);\n                } else {\n                    el.htmlElement.style.left = \"0px\";\n                }\n            }\n\n            if (el.htmlElement.offsetHeight == this.trueElementHeight) {\n                el.htmlElement.style.top = \"0px\";\n                el.htmlElement.style.bottom = \"0px\";\n            } else {\n                if (el.eos[el.eos.length - 1].element.htmlElement.offsetTop > 0) {\n                    el.htmlElement.style.top = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetTop);\n                    el.htmlElement.style.bottom = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetTop);\n                } else {\n                    el.htmlElement.style.top = \"0px\";\n                    el.htmlElement.style.bottom = \"0px\";\n                }\n            }\n\n            if (idx) {\n                el.htmlElement.style.opacity = 0;\n            }\n        }.bind(this))\n    }\n\n    this.checkVideo = function () {\n        for (var idx = 0; idx < this.container.eos.length; idx++) {\n            var vids = this.slides[idx].deepGetEosByType(bnt.Video);\n            if (vids[0]) {\n                this.videoEl = vids[0].element;\n                this.videoidx = idx;\n                if (idx == 0) this.vidPlaying = true;\n                else this.videoEl.pause();\n                break;\n            }\n        }\n    };\n\n    this.handleDown = function (event) {\n        if (this.spam) return;\n        if (this.slides.length <= 1) return;\n        this.rotator.style.transition = '';\n        this.container.htmlElement.classList.remove(this.animation);\n        this.prevented = 0;\n        this.interactionsStarted = true;\n        // bntTracking.trackEvent(\"#User Interaction started\", null);\n        this.xy0 = toXY(event);\n        if (this.vidPlaying) { this.videoEl.pause(); }\n    }\n\n    this.handleMove = function (event) {\n        if (!this.interactionsStarted) return;\n        this.xy = toXY(event);\n        this.dxy = { x: this.xy.x - this.xy0.x, y: this.xy.y - this.xy0.y };\n\n        if (this.prevented === 0) {\n            if (Math.abs(this.dxy.y) - Math.abs(this.dxy.x) > 5 && Math.abs(this.dxy.y) + Math.abs(this.dxy.x) > 15) {  // moved mouse more than 15px + check which direction\n                this.prevented = false;\n            } else if (Math.abs(this.dxy.x) + Math.abs(this.dxy.y) > 15) {\n                this.prevented = true;\n            }\n        }\n\n        if (!this.prevented) return;\n        this.preventedFlag = true;\n        event.preventDefault();\n\n        if (!this.firstInteraction) {\n            clearTimeout(this.startAuto);\n            clearInterval(this.autoInterval);\n\n            this.firstInteraction = true;\n            if (this.previewImg) this.previewImg.hide();\n            bntTracking.trackEvent(\"#First User Interaction\", null);\n        }\n\n        this.percent = this.dxy.x / this.containerWidth;\n\n        let next;\n\n        if (this.percent > 0) {\n            next = this.mod(this.activeIndex - 1, this.slides.length)\n        }\n        else {\n            next = this.mod(this.activeIndex + 1, this.slides.length)\n        }\n\n        if (next != this.nextIndex) {\n\n            if (this.nextIndex != null) {\n                this.slides[this.nextIndex].htmlElement.style.opacity = 0;\n            }\n            this.nextIndex = next;\n            this.slides[this.nextIndex].htmlElement.style.opacity = 1;\n            if (this.pairity) this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(180deg) translateZ(3px)';\n            else this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(0deg) translateZ(3px)';\n        }\n        this.rotator.style.transform = this.rotateAxis + '(' + (this.lastRotation + this.percent * 180) + 'deg)';\n    }\n\n    this.handleUp = function () {\n        if (!this.interactionsStarted) return;\n        if (!this.preventedFlag) {\n            this.rotator.style.transition = 'transform .8s';\n            return;\n        }\n        // bntTracking.trackEvent(\"#User Interaction ended\", null);\n        this.preventedFlag = false;\n        this.interactionsStarted = false;\n        this.checkForChange();\n    }\n\n    this.checkForChange = function () {\n        this.rotator.style.transition = 'transform .8s';\n        this.lastRotation = this.lastRotation + Math.round(this.percent) * 180;\n        this.rotator.style.transform = this.rotateAxis + '(' + this.lastRotation + 'deg)';\n\n        if (Math.abs(this.percent) > 0.5) {\n            this.slides[this.activeIndex].htmlElement.style.opacity = 0;\n            this.slides[this.activeIndex].htmlElement.style.zIndex = '';\n            this.activeIndex = this.nextIndex;\n            this.slides[this.activeIndex].htmlElement.style.zIndex = '99';\n\n            this.trackSlidesOnce();\n\n            this.nextIndex = null;\n            this.pairity = !this.pairity;\n\n        }\n\n        //if current slide contains video, play it\n        if (this.activeIndex == this.videoidx) {\n            this.videoEl.play();\n            this.vidPlaying = true;\n        }\n        // if there is a potential video on a different slide, (would have been paused in handleDown), mark it as not playing\n        else if (this.activeIndex != this.videoidx) {\n            //has already been paused if it exists\n            this.vidPlaying = false;\n\n\n            // flag spam to prevent interaction for 500ms & add flip animation\n            this.spam = true;\n            setTimeout(function () {\n                this.spam = false;\n                this.container.htmlElement.classList.add(this.animation);\n            }.bind(this), 500)\n        }\n    }\n\n\n\n    this.addInteractions = function () {\n        this.events = pointerEvents();\n\n        this.container.htmlElement.addEventListener(this.events.click, function () {\n            this.interactionsStarted = false;\n        }.bind(this));\n        this.container.htmlElement.addEventListener(this.events.down, this.handleDown.bind(this), { capture: true });      // down\n        this.container.htmlElement.addEventListener(this.events.up, this.handleUp.bind(this), true);                       // up\n        this.container.htmlElement.addEventListener(this.events.move, this.handleMove.bind(this));                         // move        \n        this.container.htmlElement.addEventListener(this.events.cancel, this.handleUp.bind(this));                         // cancel\n    }\n\n    this.updatePercent = function () {\n        bnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {\n            if (api) {\n                api.getSlotBounds().map(function (slotBounds) {\n                    topWindowHeight = slotBounds.viewportHeight;\n                    playerTop = slotBounds.top;\n                    this.percent = 1 - playerTop / (topWindowHeight - window.innerHeight);\n                    this.percent = this.percent > 1 ? 1 : (this.percent < 0 ? 0 : this.percent);\n                }.bind(this));\n            }\n        }.bind(this))\n    }\n\n\n    this.trackSlidesOnce = function () {\n\n        if (this.trackedSlides.indexOf(this.activeIndex) < 0) {\n            bntTracking.trackEvent(\"#Slide \" + (this.activeIndex + 1) + ': in view', null);\n            this.trackedSlides.push(this.activeIndex);\n        }\n    }\n\n    this.loop = function () {\n        this.spinLoop = bnt.requestAnimFrame(this.loop.bind(this));\n        if (this.spam) return;\n\n        this.updatePercent();\n        this.updateToSlide = Math.floor(this.percent / (1 / (this.slides.length)));\n        if (this.updateToSlide >= this.slides.length) this.updateToSlide = this.slides.length - 1;\n\n        if (this.activeIndex === this.updateToSlide)\n            return;\n\n        this.rotateSlides();\n\n    };\n\n    this.stopLoop = function () {\n        bnt.cancelAnimFrame(this.spinLoop);\n    }\n\n    this.rotateSlides = function () {\n        this.spam = true;\n\n        let oldIndex = this.activeIndex;\n\n        this.nextIndex = this.updateToSlide;\n\n        if (this.pairity) this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(180deg) translateZ(3px)';\n        else this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(0deg) translateZ(3px)';\n\n        if (this.activeIndex > this.nextIndex) this.lastRotation = this.lastRotation + 180;\n        else this.lastRotation = this.lastRotation - 180;\n        this.rotator.style.transform = this.rotateAxis + '(' + this.lastRotation + 'deg)';\n\n        this.slides[this.nextIndex].htmlElement.style.opacity = 1;\n        this.slides[this.activeIndex].htmlElement.style.zIndex = '';\n        this.slides[this.nextIndex].htmlElement.style.zIndex = '99';\n\n        this.handleTransitionEnd(oldIndex);\n    }\n\n\n    this.handleTransitionEnd = function (oldIndex) {\n        this.transitionEndHandler = function (e) {\n\n            if (e.propertyName.toLowerCase() != \"transform\")\n                return;\n\n            this.slides[oldIndex].htmlElement.style.opacity = 0;\n            this.activeIndex = this.nextIndex;\n\n            this.trackSlidesOnce();\n\n            this.nextIndex = null;\n            this.pairity = !this.pairity;\n\n            if (this.activeIndex == this.videoidx) {\n                this.videoEl.play();\n                this.vidPlaying = true;\n\n                if (this.stayVideo) {\n                    this.stopLoop();\n                }\n            } else {\n                if (this.videoidx != null)\n                    this.videoEl.pause();\n                this.vidPlaying = false;\n            }\n\n            this.spam = false;\n\n            this.rotator.removeEventListener('transitionend', this.transitionEndHandler)\n\n        }.bind(this);\n\n        this.rotator.addEventListener('transitionend', this.transitionEndHandler)\n    }\n\n\n\n    this.autoNext = function () {\n        if (this.spam) return;\n        this.updateToSlide = this.activeIndex + 1;\n        if (this.updateToSlide >= this.slides.length) {\n            clearInterval(this.autoInterval);\n            this.container.htmlElement.classList.add(this.animation);\n            return;\n        };\n\n        if (this.activeIndex === this.updateToSlide) return;\n\n        this.rotateSlides();\n\n    }\n\n    this.mod = function (n, m) {\n        return ((n % m) + m) % m;\n    }\n}\n\nvar carousel = new flipCarousel(config);\n\nvar is_mobile = /(android|iphone|ipad)/gi.test(navigator.userAgent);\n\nfunction toXY(evt) {\n    var s = scale.get();\n\n    if (is_mobile) {\n        return {\n            x: evt.pageX = evt.touches[0].pageX * s,\n            y: evt.pageY = evt.touches[0].pageY * s,\n        }\n    } else {\n        return {\n            x: evt.pageX * s,\n            y: evt.pageY * s\n        }\n    }\n}\n\nfunction pointerEvents() {\n    if (is_mobile) {\n        return {\n            down: \"touchstart\",\n            up: \"touchend\",\n            move: \"touchmove\",\n            cancel: \"touchcancel\"\n        }\n    } else {\n        return {\n            down: \"mousedown\",\n            up: \"mouseup\",\n            move: \"mousemove\",\n            cancel: \"mouseleave\"\n        }\n    }\n}\n\nvar scale = new function () {\n    var scale = 1;\n\n    this.get = function () { return scale; };\n\n    function calculateScale() {\n        scale = creative.canvases[0].config.width / window.innerWidth;\n    }\n\n    calculateScale();\n\n    window.addEventListener(\"resize\", function () {\n        calculateScale();\n    });\n};\n\n\n/************************************************************\n* ==> Check if Display viewable\n************************************************************/\nif (!creative.screens[0].deepGetEosByType(bnt.Video).length) {\n    bnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {\n        if (api) {\n            api.getStudioData().map(function (data) {\n                if (data) data.display = true; else data = { display: true };\n                api.setStudioData(data).map(function () {\n                    var state = bnt.get(bnt.State);\n                    if (state) {\n                        api.sendVideoMetadata({ width: state.canvas.config.width, height: state.canvas.config.height });\n                    } else {\n                        var fixStage = function (state) {\n                            api.sendVideoMetadata({ width: state.canvas.config.width, height: state.canvas.config.height }); // force player to resize slot in case it got a different size from the vast tag\n                            bnt.get(bnt.StateChangeDetector).stateUpdated.removeObserver(fixStage); // we do this only once -\n                        };\n                        bnt.get(bnt.StateChangeDetector).stateUpdated.addObserver(fixStage);\n                    }\n                });\n            });\n        }\n        if (window.parent.adApi && window.parent.adApi.bntAd) {\n            window.parent.adApi.bntAd.environment.videoSlot = null;\n        }\n        bnt.TeadsPlayerAddons.brandingModeOnVoidClick = false;\n    });\n}\n\n\n//sound\n/******************************************\n * Sound Icon config\n *****************************************/\n\nvar soundConfig = {\n    left: '', //Position on X axis. Leave just the quotes for default\n    top: '', //Position on Y axis. Leave just the quotes for default\n    customIcon: '', //Name of the svg file goes between the quotes. Leave just the quotes if you don't wish to change sound color\n    screensToHideSoundIcon: [Screen1], //Name of the screens the sound icon should not be displayed; Separate them with comma. Leave it empty for default\n    videosToShowSoundIconOn: [MainVideo] //Name of the Video the sound icon should be displayed; Separate them with comma. Leave it empty for default\n}\n\n/******************************************\n * Sound Icon visibile calcs\n *****************************************/\nfunction createVisibleCss() {\n    var soundIconSize = 60;\n\n    var cssObj = {} //right, left, top, bottom, transform, display, padding\n\n    var scale = window.innerWidth / creative.canvases[0].config.width;\n\n    var leftTrimLen = soundConfig.left.trim().length;\n    var rightTrimLen = soundConfig.top.trim().length;\n\n    if (leftTrimLen) {\n        cssObj.right = `auto !important`\n        cssObj.left = `${soundConfig.left * scale}px !important`\n\n        cssObj.transform = `translateX(-50%) `\n        cssObj['-webkit-transform'] = `translateX(-50%) `\n    }\n\n    if (rightTrimLen) {\n        cssObj.bottom = `auto !important`;\n        cssObj.top = `${soundConfig.top * scale}px !important`;\n\n        if (cssObj.transform) cssObj.transform += `translateY(-50%)`;\n        else cssObj.transform += `translateY(-50%)`;\n\n        if (cssObj['-webkit-transform']) cssObj['-webkit-transform'] += `translateY(-50%)`;\n        else cssObj['-webkit-transform'] += `translateY(-50%)`;\n    }\n\n    if (leftTrimLen || rightTrimLen) {\n        cssObj.padding = `0px`\n\n        cssObj.width = `${soundIconSize * scale}px !important`;\n        cssObj.height = `${soundIconSize * scale}px !important`;\n\n        cssObj.display = 'flex !important';\n        cssObj['justify-content'] = 'center';\n        cssObj['align-items'] = 'center';\n    }\n\n    var cssStr = 'div.teads-ui-component-soundbutton {\\n';\n\n    Object.keys(cssObj).forEach(function (key) {\n        cssStr += key + \": \" + cssObj[key] + \";\\n\"\n    })\n\n    cssStr += '}'\n\n    return cssStr;\n}\n\n/******************************************\n * Sound Icon hidden calcs\n *****************************************/\nfunction createHiddenCss() {\n    return 'div.teads-ui-component-soundbutton {right: -2000px !important; }';\n}\n\n/******************************************\n * Sound Icon icon set\n *****************************************/\nfunction createVisualCss() {\n    if (soundConfig.customIcon.trim().length) {\n        return `.icon-muteoff, .icon-muteon {background-image: url( ${bnt.LIBRARY[soundConfig.customIcon].link}) !important;}`\n    } else return ''\n}\n\n/******************************************\n * Check Player Api and Update sound icon\n *****************************************/\nbnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {\n    if (api) {\n        creative.screens.forEach(function (screen) {\n            screen.onshow.addObserver(function () {\n                if (soundConfig.screensToHideSoundIcon.indexOf(screen) != -1) {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])\n                } else {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [\n                        createVisibleCss() + createVisualCss()\n                    ]);\n                }\n            })\n        })\n\n        if (soundConfig.videosToShowSoundIconOn.length) {\n\n            soundConfig.videosToShowSoundIconOn.forEach(function (vid) {\n                vid.onplay.addObserver(function () {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [\n                        createVisibleCss() + createVisualCss()\n                    ]);\n                })\n                vid.onend.addObserver(function () {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])\n                })\n                vid.onpause.addObserver(function () {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])\n                })\n            })\n        }\n    }\n})","css":"[id^=\"Slide\"], [id^=\"Slide\"] * {\n    transform-style: preserve-3d;\n} \n\n[id^=\"Slide\"] > div > div > div > div {\n  transform: translateZ(1px) !important;\n}\n\n[id^=\"item\"], [id^=\"Item\"], #Swipe {\n    transform: translateZ(30px) !important;\n}\n\n[id^=\"Slide\"] > div > div * {\n  backface-visibility: hidden !important;\n  -webkit-backface-visibility: hidden !important;\n}\n\n@keyframes flipPreviewY{\n  0%, 60%, 100% {\n    transform: rotateY(0deg);\n  }\n\n  64%, 86%{\n    transform: rotateY(-20deg);\n  }\n\n  72%{\n    transform: rotateY(20deg);\n  }\n}\n\n@-webkit-keyframes flipPreviewY{\n  0%, 60%, 100% {\n    transform: rotateY(0deg);\n  }\n\n  64%, 86%{\n    transform: rotateY(-20deg);\n  }\n\n  72%{\n    transform: rotateY(20deg);\n  }\n}\n\n@keyframes flipPreviewX{\n  0%, 60%, 100% {\n    transform: rotateX(0deg);\n  }\n\n  64%, 86%{\n    transform: rotateX(-20deg);\n  }\n\n  72%{\n    transform: rotateX(20deg);\n  }\n}\n\n@-webkit-keyframes flipPreviewX{\n  0%, 60%, 100% {\n    transform: rotateX(0deg);\n  }\n\n  64%, 86%{\n    transform: rotateX(-20deg);\n  }\n\n  72%{\n    transform: rotateX(20deg);\n  }\n}\n\n.previewAnimation {\n    perspective: 3000px;\n}\n.previewAnimation > div {\n    transform-style: preserve-3d;\n    animation: flipPreviewY infinite 3s;\n    perspective: none !important;\n}"}}]) ;
+bnt.QueryParams.params = {};
+
+adController = new bnt.AdController(creative);
+
+FlipCarousel = creative.elements.get("FlipCarousel");
+Slide1 = creative.elements.get("Slide1");
+SwipePreview = creative.elements.get("SwipePreview");
+MainVideo = creative.elements.get("MainVideo");
+Slide2 = creative.elements.get("Slide2");
+Image1 = creative.elements.get("Image1");
+Shape1 = creative.elements.get("Shape1");
+
+MainVideo.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://ad.doubleclick.net/ddm/trackclk/N5295.4347312TEADSKR/B31510307.388761224;dc_trk_aid=580036919;dc_trk_cid=210385540;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1");
+		bntTracking.trackEvent("MainVideo: onclick", null);
+	});
+Image1.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://ad.doubleclick.net/ddm/trackclk/N5295.4347312TEADSKR/B31510307.388761224;dc_trk_aid=580036919;dc_trk_cid=210385540;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1");
+		bntTracking.trackEvent("Image1: onclick", null);
+	});
+
+Screen1 = creative.screens[0];
+
+Screen1.onshow
+	.addObserver(function () {
+		creative.getController().trackPixel("https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761224;dc_trk_aid=580036919;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?");
+		Screen1.onshow.removeObserver(arguments.callee);
+	});
+Screen1.onshow
+	.addObserver(function () {
+		creative.getController().trackPixel("https://img.macromill.com/imp/us002697ijs/0000741784-img-86");
+		Screen1.onshow.removeObserver(arguments.callee);
+	});
+Screen1.onshow
+	.addObserver(function () {
+		creative.getController().trackPixel("https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761308;dc_trk_aid=580160965;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?");
+		Screen1.onshow.removeObserver(arguments.callee);
+	});
+Screen1.onshow
+	.addObserver(function () {
+		creative.getController().trackPixel("https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761287;dc_trk_aid=580161460;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?");
+		Screen1.onshow.removeObserver(arguments.callee);
+	});
+Screen1.onshow
+	.addObserver(function () {
+		creative.getController().trackPixel("https://ad.doubleclick.net/ddm/trackimp/N5295.4347312TEADSKR/B31510307.388761302;dc_trk_aid=580037447;dc_trk_cid=210385540;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1?");
+		Screen1.onshow.removeObserver(arguments.callee);
+	});
+
+
+trkConfig = { uid: uid, cid: cid };
+bntTracking = new bnt.TrackingUnit(trkConfig);
+bntTracking.trackCreative(creative);
+bntTracking.trackVideoQuartiles(MainVideo, "MainVideo");
+            
+
+
+
+// Checked 29.11.2021 PLEASE DO NOT DELETE THIS LINE
+
+var config = {
+    screen: Screen1,
+    carouselContainer: FlipCarousel,
+    perspective: 3000,
+    previewElem: SwipePreview,
+    callAnimation: 'previewAnimation',
+    rotateAxis: 'x', // x only on scroll
+    onScroll: true,
+    auto: 3, //only available when onScroll is false. Set number of seconds, or null
+    startAutoAfter: 1, //only available when onScroll is false. Set number of seconds, or null
+    stayOnVideoSlide: false, //set true or false
+    speed: 0.6, //speed in seconds
+
+}
+
+var flipCarousel = function (config) {
+    this.screen = config.screen;
+    this.container = config.carouselContainer;
+    this.perspective = config.perspective;
+    this.previewImg = config.previewElem;
+    this.animation = config.callAnimation;
+    this.onscroll = config.onScroll;
+    this.stayVideo = false;
+    this.speed = config.speed;
+    if (this.onscroll) this.stayVideo = config.stayOnVideoSlide;
+    this.autoTime = (config.auto >= this.speed || config.auto == null) ? config.auto : this.speed;
+    this.startAutoTime = config.startAutoAfter ? config.startAutoAfter : 0;
+    this.percent = 0;
+    this.spinLoop;
+
+    if (config.rotateAxis == 'x' && this.onscroll) {
+        this.rotateAxis = 'rotateX';
+    } else {
+        this.rotateAxis = 'rotateY';
+    }
+
+    this.interactionsStarted = false;
+    this.activeIndex = 0;
+    this.lastRotation = 0;
+    this.nextIndex = null;
+    this.pairity = true;
+    this.firstInteraction = false;
+    this.spam = false
+
+    this.videoEl = null;
+    this.videoidx = null;
+    this.vidPlaying = false;
+    this.trackedSlides = [0];
+
+    this.slides = this.container.eos.map(function (slide) { return slide.element; });
+
+    this.screen.onshow.addObserver(function () {
+        this.init();
+    }.bind(this))
+
+    this.screen.onhide.addObserver(function () {
+        this.stopLoop();
+    }.bind(this));
+
+    this.init = function () {
+        this.setupContainerPosition();
+        this.setupSlidesPosition();
+        this.checkVideo();
+
+        bntTracking.trackEvent("#Slide " + (this.activeIndex + 1) + ': in view', null);
+
+        if (this.onscroll) {
+            this.loop();
+            this.container.htmlElement.classList.remove(this.animation);
+
+        } else {
+            this.addInteractions();
+
+            if (this.autoTime) {
+                this.startAuto();
+            }
+        }
+    }
+
+    this.startAuto = function () {
+        this.startAuto = setTimeout(function () {
+
+            setTimeout(function () {
+                this.container.htmlElement.classList.remove(this.animation);
+            }.bind(this), this.autoTime * 1000 - 100)
+
+            this.autoInterval = setInterval(function () {
+                this.autoNext();
+            }.bind(this), this.autoTime * 1000)
+
+        }.bind(this), this.startAutoTime * 1000)
+    }
+
+    this.setupContainerPosition = function () {
+        this.rotator = this.container.htmlElement.childNodes[0].childNodes[0];
+        this.rotator.style.transformStyle = 'preserve-3d';
+        this.rotator.style.transition = 'transform ' + this.speed + 's';
+        this.container.htmlElement.childNodes[0].style.perspective = this.perspective + 'px';
+
+        this.container.htmlElement.classList.add(this.animation);
+
+        this.containerWidth = this.container.htmlElement.offsetWidth;
+        this.containerLeft = this.container.htmlElement.offsetLeft;
+
+        this.trueElementLeft = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetLeft + this.slides[0].htmlElement.offsetLeft;
+        this.trueElementWidth = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetWidth;
+
+        this.outlineOffset = this.containerLeft + this.trueElementLeft;
+        if (this.containerWidth > this.trueElementWidth) {
+            this.rotator.style.width = bnt.px(this.trueElementWidth);
+            this.container.htmlElement.style.left = bnt.px(this.outlineOffset);
+            this.containerWidth = this.container.htmlElement.offsetWidth;
+        }
+
+        this.containerHeight = this.container.htmlElement.offsetHeight;
+        this.containerTop = this.container.htmlElement.offsetTop;
+
+        this.trueElementTop = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetTop + this.slides[0].htmlElement.offsetTop;
+        this.trueElementHeight = this.slides[0].eos[this.slides[0].eos.length - 1].element.htmlElement.offsetHeight;
+
+        this.outlineOffset = this.containerTop + this.trueElementTop;
+        if (this.containerHeight > this.trueElementHeight) {
+            this.rotator.style.height = bnt.px(this.trueElementHeight);
+            this.container.htmlElement.style.top = bnt.px(this.outlineOffset);
+            this.containerHeight = this.container.htmlElement.offsetHeight;
+        }
+    }
+
+
+    this.setupSlidesPosition = function () {
+        this.slides.forEach(function (el, idx) {
+
+            el.htmlElement.style.backfaceVisibility = 'hidden';
+
+            el.eos.forEach(function (slideElement, slideElement_idx) {
+                let elementId = slideElement.element.elementId.toLowerCase()
+                if (elementId.indexOf("item") != -1)
+                    slideElement.element.htmlElement.style.transform = "translateZ(30px)";
+                else
+                    slideElement.element.htmlElement.style.transform = "translateZ(1px)";
+            })
+
+            if (el.htmlElement.offsetWidth == this.trueElementWidth) {
+                el.htmlElement.style.left = "0px";
+            } else {
+                if (el.eos[el.eos.length - 1].element.htmlElement.offsetLeft > 0) {
+                    el.htmlElement.style.left = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetLeft);
+                    el.htmlElement.style.right = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetLeft);
+                } else {
+                    el.htmlElement.style.left = "0px";
+                }
+            }
+
+            if (el.htmlElement.offsetHeight == this.trueElementHeight) {
+                el.htmlElement.style.top = "0px";
+                el.htmlElement.style.bottom = "0px";
+            } else {
+                if (el.eos[el.eos.length - 1].element.htmlElement.offsetTop > 0) {
+                    el.htmlElement.style.top = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetTop);
+                    el.htmlElement.style.bottom = bnt.px(- el.eos[el.eos.length - 1].element.htmlElement.offsetTop);
+                } else {
+                    el.htmlElement.style.top = "0px";
+                    el.htmlElement.style.bottom = "0px";
+                }
+            }
+
+            if (idx) {
+                el.htmlElement.style.opacity = 0;
+            }
+        }.bind(this))
+    }
+
+    this.checkVideo = function () {
+        for (var idx = 0; idx < this.container.eos.length; idx++) {
+            var vids = this.slides[idx].deepGetEosByType(bnt.Video);
+            if (vids[0]) {
+                this.videoEl = vids[0].element;
+                this.videoidx = idx;
+                if (idx == 0) this.vidPlaying = true;
+                else this.videoEl.pause();
+                break;
+            }
+        }
+    };
+
+    this.handleDown = function (event) {
+        if (this.spam) return;
+        if (this.slides.length <= 1) return;
+        this.rotator.style.transition = '';
+        this.container.htmlElement.classList.remove(this.animation);
+        this.prevented = 0;
+        this.interactionsStarted = true;
+        // bntTracking.trackEvent("#User Interaction started", null);
+        this.xy0 = toXY(event);
+        if (this.vidPlaying) { this.videoEl.pause(); }
+    }
+
+    this.handleMove = function (event) {
+        if (!this.interactionsStarted) return;
+        this.xy = toXY(event);
+        this.dxy = { x: this.xy.x - this.xy0.x, y: this.xy.y - this.xy0.y };
+
+        if (this.prevented === 0) {
+            if (Math.abs(this.dxy.y) - Math.abs(this.dxy.x) > 5 && Math.abs(this.dxy.y) + Math.abs(this.dxy.x) > 15) {  // moved mouse more than 15px + check which direction
+                this.prevented = false;
+            } else if (Math.abs(this.dxy.x) + Math.abs(this.dxy.y) > 15) {
+                this.prevented = true;
+            }
+        }
+
+        if (!this.prevented) return;
+        this.preventedFlag = true;
+        event.preventDefault();
+
+        if (!this.firstInteraction) {
+            clearTimeout(this.startAuto);
+            clearInterval(this.autoInterval);
+
+            this.firstInteraction = true;
+            if (this.previewImg) this.previewImg.hide();
+            bntTracking.trackEvent("#First User Interaction", null);
+        }
+
+        this.percent = this.dxy.x / this.containerWidth;
+
+        let next;
+
+        if (this.percent > 0) {
+            next = this.mod(this.activeIndex - 1, this.slides.length)
+        }
+        else {
+            next = this.mod(this.activeIndex + 1, this.slides.length)
+        }
+
+        if (next != this.nextIndex) {
+
+            if (this.nextIndex != null) {
+                this.slides[this.nextIndex].htmlElement.style.opacity = 0;
+            }
+            this.nextIndex = next;
+            this.slides[this.nextIndex].htmlElement.style.opacity = 1;
+            if (this.pairity) this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(180deg) translateZ(3px)';
+            else this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(0deg) translateZ(3px)';
+        }
+        this.rotator.style.transform = this.rotateAxis + '(' + (this.lastRotation + this.percent * 180) + 'deg)';
+    }
+
+    this.handleUp = function () {
+        if (!this.interactionsStarted) return;
+        if (!this.preventedFlag) {
+            this.rotator.style.transition = 'transform .8s';
+            return;
+        }
+        // bntTracking.trackEvent("#User Interaction ended", null);
+        this.preventedFlag = false;
+        this.interactionsStarted = false;
+        this.checkForChange();
+    }
+
+    this.checkForChange = function () {
+        this.rotator.style.transition = 'transform .8s';
+        this.lastRotation = this.lastRotation + Math.round(this.percent) * 180;
+        this.rotator.style.transform = this.rotateAxis + '(' + this.lastRotation + 'deg)';
+
+        if (Math.abs(this.percent) > 0.5) {
+            this.slides[this.activeIndex].htmlElement.style.opacity = 0;
+            this.slides[this.activeIndex].htmlElement.style.zIndex = '';
+            this.activeIndex = this.nextIndex;
+            this.slides[this.activeIndex].htmlElement.style.zIndex = '99';
+
+            this.trackSlidesOnce();
+
+            this.nextIndex = null;
+            this.pairity = !this.pairity;
+
+        }
+
+        //if current slide contains video, play it
+        if (this.activeIndex == this.videoidx) {
+            this.videoEl.play();
+            this.vidPlaying = true;
+        }
+        // if there is a potential video on a different slide, (would have been paused in handleDown), mark it as not playing
+        else if (this.activeIndex != this.videoidx) {
+            //has already been paused if it exists
+            this.vidPlaying = false;
+
+
+            // flag spam to prevent interaction for 500ms & add flip animation
+            this.spam = true;
+            setTimeout(function () {
+                this.spam = false;
+                this.container.htmlElement.classList.add(this.animation);
+            }.bind(this), 500)
+        }
+    }
+
+
+
+    this.addInteractions = function () {
+        this.events = pointerEvents();
+
+        this.container.htmlElement.addEventListener(this.events.click, function () {
+            this.interactionsStarted = false;
+        }.bind(this));
+        this.container.htmlElement.addEventListener(this.events.down, this.handleDown.bind(this), { capture: true });      // down
+        this.container.htmlElement.addEventListener(this.events.up, this.handleUp.bind(this), true);                       // up
+        this.container.htmlElement.addEventListener(this.events.move, this.handleMove.bind(this));                         // move        
+        this.container.htmlElement.addEventListener(this.events.cancel, this.handleUp.bind(this));                         // cancel
+    }
+
+    this.updatePercent = function () {
+        bnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {
+            if (api) {
+                api.getSlotBounds().map(function (slotBounds) {
+                    topWindowHeight = slotBounds.viewportHeight;
+                    playerTop = slotBounds.top;
+                    this.percent = 1 - playerTop / (topWindowHeight - window.innerHeight);
+                    this.percent = this.percent > 1 ? 1 : (this.percent < 0 ? 0 : this.percent);
+                }.bind(this));
+            }
+        }.bind(this))
+    }
+
+
+    this.trackSlidesOnce = function () {
+
+        if (this.trackedSlides.indexOf(this.activeIndex) < 0) {
+            bntTracking.trackEvent("#Slide " + (this.activeIndex + 1) + ': in view', null);
+            this.trackedSlides.push(this.activeIndex);
+        }
+    }
+
+    this.loop = function () {
+        this.spinLoop = bnt.requestAnimFrame(this.loop.bind(this));
+        if (this.spam) return;
+
+        this.updatePercent();
+        this.updateToSlide = Math.floor(this.percent / (1 / (this.slides.length)));
+        if (this.updateToSlide >= this.slides.length) this.updateToSlide = this.slides.length - 1;
+
+        if (this.activeIndex === this.updateToSlide)
+            return;
+
+        this.rotateSlides();
+
+    };
+
+    this.stopLoop = function () {
+        bnt.cancelAnimFrame(this.spinLoop);
+    }
+
+    this.rotateSlides = function () {
+        this.spam = true;
+
+        let oldIndex = this.activeIndex;
+
+        this.nextIndex = this.updateToSlide;
+
+        if (this.pairity) this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(180deg) translateZ(3px)';
+        else this.slides[this.nextIndex].htmlElement.style.transform = this.rotateAxis + '(0deg) translateZ(3px)';
+
+        if (this.activeIndex > this.nextIndex) this.lastRotation = this.lastRotation + 180;
+        else this.lastRotation = this.lastRotation - 180;
+        this.rotator.style.transform = this.rotateAxis + '(' + this.lastRotation + 'deg)';
+
+        this.slides[this.nextIndex].htmlElement.style.opacity = 1;
+        this.slides[this.activeIndex].htmlElement.style.zIndex = '';
+        this.slides[this.nextIndex].htmlElement.style.zIndex = '99';
+
+        this.handleTransitionEnd(oldIndex);
+    }
+
+
+    this.handleTransitionEnd = function (oldIndex) {
+        this.transitionEndHandler = function (e) {
+
+            if (e.propertyName.toLowerCase() != "transform")
+                return;
+
+            this.slides[oldIndex].htmlElement.style.opacity = 0;
+            this.activeIndex = this.nextIndex;
+
+            this.trackSlidesOnce();
+
+            this.nextIndex = null;
+            this.pairity = !this.pairity;
+
+            if (this.activeIndex == this.videoidx) {
+                this.videoEl.play();
+                this.vidPlaying = true;
+
+                if (this.stayVideo) {
+                    this.stopLoop();
+                }
+            } else {
+                if (this.videoidx != null)
+                    this.videoEl.pause();
+                this.vidPlaying = false;
+            }
+
+            this.spam = false;
+
+            this.rotator.removeEventListener('transitionend', this.transitionEndHandler)
+
+        }.bind(this);
+
+        this.rotator.addEventListener('transitionend', this.transitionEndHandler)
+    }
+
+
+
+    this.autoNext = function () {
+        if (this.spam) return;
+        this.updateToSlide = this.activeIndex + 1;
+        if (this.updateToSlide >= this.slides.length) {
+            clearInterval(this.autoInterval);
+            this.container.htmlElement.classList.add(this.animation);
+            return;
+        };
+
+        if (this.activeIndex === this.updateToSlide) return;
+
+        this.rotateSlides();
+
+    }
+
+    this.mod = function (n, m) {
+        return ((n % m) + m) % m;
+    }
+}
+
+var carousel = new flipCarousel(config);
+
+var is_mobile = /(android|iphone|ipad)/gi.test(navigator.userAgent);
+
+function toXY(evt) {
+    var s = scale.get();
+
+    if (is_mobile) {
+        return {
+            x: evt.pageX = evt.touches[0].pageX * s,
+            y: evt.pageY = evt.touches[0].pageY * s,
+        }
+    } else {
+        return {
+            x: evt.pageX * s,
+            y: evt.pageY * s
+        }
+    }
+}
+
+function pointerEvents() {
+    if (is_mobile) {
+        return {
+            down: "touchstart",
+            up: "touchend",
+            move: "touchmove",
+            cancel: "touchcancel"
+        }
+    } else {
+        return {
+            down: "mousedown",
+            up: "mouseup",
+            move: "mousemove",
+            cancel: "mouseleave"
+        }
+    }
+}
+
+var scale = new function () {
+    var scale = 1;
+
+    this.get = function () { return scale; };
+
+    function calculateScale() {
+        scale = creative.canvases[0].config.width / window.innerWidth;
+    }
+
+    calculateScale();
+
+    window.addEventListener("resize", function () {
+        calculateScale();
+    });
+};
+
+
+/************************************************************
+* ==> Check if Display viewable
+************************************************************/
+if (!creative.screens[0].deepGetEosByType(bnt.Video).length) {
+    bnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {
+        if (api) {
+            api.getStudioData().map(function (data) {
+                if (data) data.display = true; else data = { display: true };
+                api.setStudioData(data).map(function () {
+                    var state = bnt.get(bnt.State);
+                    if (state) {
+                        api.sendVideoMetadata({ width: state.canvas.config.width, height: state.canvas.config.height });
+                    } else {
+                        var fixStage = function (state) {
+                            api.sendVideoMetadata({ width: state.canvas.config.width, height: state.canvas.config.height }); // force player to resize slot in case it got a different size from the vast tag
+                            bnt.get(bnt.StateChangeDetector).stateUpdated.removeObserver(fixStage); // we do this only once -
+                        };
+                        bnt.get(bnt.StateChangeDetector).stateUpdated.addObserver(fixStage);
+                    }
+                });
+            });
+        }
+        if (window.parent.adApi && window.parent.adApi.bntAd) {
+            window.parent.adApi.bntAd.environment.videoSlot = null;
+        }
+        bnt.TeadsPlayerAddons.brandingModeOnVoidClick = false;
+    });
+}
+
+
+//sound
+/******************************************
+ * Sound Icon config
+ *****************************************/
+
+var soundConfig = {
+    left: '', //Position on X axis. Leave just the quotes for default
+    top: '', //Position on Y axis. Leave just the quotes for default
+    customIcon: '', //Name of the svg file goes between the quotes. Leave just the quotes if you don't wish to change sound color
+    screensToHideSoundIcon: [Screen1], //Name of the screens the sound icon should not be displayed; Separate them with comma. Leave it empty for default
+    videosToShowSoundIconOn: [MainVideo] //Name of the Video the sound icon should be displayed; Separate them with comma. Leave it empty for default
+}
+
+/******************************************
+ * Sound Icon visibile calcs
+ *****************************************/
+function createVisibleCss() {
+    var soundIconSize = 60;
+
+    var cssObj = {} //right, left, top, bottom, transform, display, padding
+
+    var scale = window.innerWidth / creative.canvases[0].config.width;
+
+    var leftTrimLen = soundConfig.left.trim().length;
+    var rightTrimLen = soundConfig.top.trim().length;
+
+    if (leftTrimLen) {
+        cssObj.right = `auto !important`
+        cssObj.left = `${soundConfig.left * scale}px !important`
+
+        cssObj.transform = `translateX(-50%) `
+        cssObj['-webkit-transform'] = `translateX(-50%) `
+    }
+
+    if (rightTrimLen) {
+        cssObj.bottom = `auto !important`;
+        cssObj.top = `${soundConfig.top * scale}px !important`;
+
+        if (cssObj.transform) cssObj.transform += `translateY(-50%)`;
+        else cssObj.transform += `translateY(-50%)`;
+
+        if (cssObj['-webkit-transform']) cssObj['-webkit-transform'] += `translateY(-50%)`;
+        else cssObj['-webkit-transform'] += `translateY(-50%)`;
+    }
+
+    if (leftTrimLen || rightTrimLen) {
+        cssObj.padding = `0px`
+
+        cssObj.width = `${soundIconSize * scale}px !important`;
+        cssObj.height = `${soundIconSize * scale}px !important`;
+
+        cssObj.display = 'flex !important';
+        cssObj['justify-content'] = 'center';
+        cssObj['align-items'] = 'center';
+    }
+
+    var cssStr = 'div.teads-ui-component-soundbutton {\n';
+
+    Object.keys(cssObj).forEach(function (key) {
+        cssStr += key + ": " + cssObj[key] + ";\n"
+    })
+
+    cssStr += '}'
+
+    return cssStr;
+}
+
+/******************************************
+ * Sound Icon hidden calcs
+ *****************************************/
+function createHiddenCss() {
+    return 'div.teads-ui-component-soundbutton {right: -2000px !important; }';
+}
+
+/******************************************
+ * Sound Icon icon set
+ *****************************************/
+function createVisualCss() {
+    if (soundConfig.customIcon.trim().length) {
+        return `.icon-muteoff, .icon-muteon {background-image: url( ${bnt.LIBRARY[soundConfig.customIcon].link}) !important;}`
+    } else return ''
+}
+
+/******************************************
+ * Check Player Api and Update sound icon
+ *****************************************/
+bnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {
+    if (api) {
+        creative.screens.forEach(function (screen) {
+            screen.onshow.addObserver(function () {
+                if (soundConfig.screensToHideSoundIcon.indexOf(screen) != -1) {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])
+                } else {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [
+                        createVisibleCss() + createVisualCss()
+                    ]);
+                }
+            })
+        })
+
+        if (soundConfig.videosToShowSoundIconOn.length) {
+
+            soundConfig.videosToShowSoundIconOn.forEach(function (vid) {
+                vid.onplay.addObserver(function () {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [
+                        createVisibleCss() + createVisualCss()
+                    ]);
+                })
+                vid.onend.addObserver(function () {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])
+                })
+                vid.onpause.addObserver(function () {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])
+                })
+            })
+        }
+    }
+})
+
+}
+			</script><script src="https://s8t.teads.tv/sdk/2022.0.0"></script><style type="text/css">.slideFromRight{animation-name:slideFromRight}@keyframes slideFromRight{from{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromLeft{animation-name:slideFromLeft}@keyframes slideFromLeft{from{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromTop{animation-name:slideFromTop}@keyframes slideFromTop{from{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromBottom{animation-name:slideFromBottom}@keyframes slideFromBottom{from{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.horizontalFlipIn{animation-name:horizontalFlipIn}@keyframes horizontalFlipIn{from{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.verticalFlipIn{animation-name:verticalFlipIn}@keyframes verticalFlipIn{from{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.fadeIn{animation-name:fadeIn}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.zoomIn{animation-name:zoomIn}@keyframes zoomIn{from{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}to{opacity:1}}.slideToRight{animation-name:slideToRight}@keyframes slideToRight{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}}.slideToLeft{animation-name:slideToLeft}@keyframes slideToLeft{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}}.slideToTop{animation-name:slideToTop}@keyframes slideToTop{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}}.slideToBottom{animation-name:slideToBottom}@keyframes slideToBottom{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}}.horizontalFlipOut{animation-name:horizontalFlipOut}@keyframes horizontalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.verticalFlipOut{animation-name:verticalFlipOut}@keyframes verticalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.fadeOut{animation-name:fadeOut}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.zoomOut{animation-name:zoomOut}@keyframes zoomOut{from{opacity:1}to{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}}/*# sourceMappingURL=animations.css.map */[id^="Slide"], [id^="Slide"] * {    transform-style: preserve-3d;} [id^="Slide"] > div > div > div > div {  transform: translateZ(1px) !important;}[id^="item"], [id^="Item"], #Swipe {    transform: translateZ(30px) !important;}[id^="Slide"] > div > div * {  backface-visibility: hidden !important;  -webkit-backface-visibility: hidden !important;}@keyframes flipPreviewY{  0%, 60%, 100% {    transform: rotateY(0deg);  }  64%, 86%{    transform: rotateY(-20deg);  }  72%{    transform: rotateY(20deg);  }}@-webkit-keyframes flipPreviewY{  0%, 60%, 100% {    transform: rotateY(0deg);  }  64%, 86%{    transform: rotateY(-20deg);  }  72%{    transform: rotateY(20deg);  }}@keyframes flipPreviewX{  0%, 60%, 100% {    transform: rotateX(0deg);  }  64%, 86%{    transform: rotateX(-20deg);  }  72%{    transform: rotateX(20deg);  }}@-webkit-keyframes flipPreviewX{  0%, 60%, 100% {    transform: rotateX(0deg);  }  64%, 86%{    transform: rotateX(-20deg);  }  72%{    transform: rotateX(20deg);  }}.previewAnimation {    perspective: 3000px;}.previewAnimation > div {    transform-style: preserve-3d;    animation: flipPreviewY infinite 3s;    perspective: none !important;}
+</style><style id="__web-inspector-hide-shortcut-style__">
+.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+{
+    visibility: hidden !important;
+}
+</style></head><body><div style="position: absolute; overflow: hidden; width: 960px; height: 540px; top: 0.375px; left: 0px; transform-origin: 0px 0px; transform: scale(0.670833, 0.670833);"><div id="Screen1" style="overflow: hidden; position: absolute; top: 0px; left: 0px; width: 960px; height: 540px;"><div class="position" id="FlipCarousel" style="position: absolute; left: 0px; top: 0px; z-index: 2; transform: translateZ(0px);"><div class="animation" style="perspective: 3000px;"><div style="width: 960px; height: 540px; transform-style: preserve-3d; transition: transform 0.6s ease 0s; transform: rotateX(-180deg);"><div class="position" id="Slide1" style="position: absolute; left: 0px; top: 0px; transform: rotateX(0deg) translateZ(3px); backface-visibility: hidden; bottom: 0px; opacity: 0;"><div class="animation"><div style="width: 960px; height: 540px;"><div class="position" id="SwipePreview" hidden="" style="position: absolute; left: 10px; top: 0px; z-index: 2; transform: translateZ(1px);"><div class="animation"><div style="width: 100px; height: 100px; transform: rotate(0deg); overflow: hidden; position: relative;"><img sizes="10.416666666666666vw" srcset="https://s8t.teads.tv/creative-6753877077099559/swipe-1581431349283.700.webp 700w" src="https://s8t.teads.tv/creative-6753877077099559/swipe-1581431349283.700.png" style="width: 100px; height: 100px; position: absolute; left: 0px; top: 0px; user-select: none; transform: translateZ(0px);"><img sizes="10.416666666666666vw" hidden="" style="width: 100px; height: 100px; position: absolute; left: 0px; top: 0px; user-select: none; transform: translateZ(0px);"><div class="bnt-viewport-indicator" hidden=""><div class="bnt-indicator"><div class="bnt-indicator-inner"></div></div><div class="bnt-indicator bnt-indicator-shadow"><div class="bnt-indicator-inner"></div></div></div><div class="bnt-viewport-indicator" hidden=""><div class="bnt-indicator"><div class="bnt-indicator-inner"></div></div><div class="bnt-indicator bnt-indicator-shadow"><div class="bnt-indicator-inner"></div></div></div></div></div></div><div class="position" id="MainVideo" style="cursor: pointer; position: absolute; left: 0px; top: 0px; z-index: 1; transform: translateZ(1px);"><div class="animation"><div style="width: 960px; height: 540px; overflow: hidden; position: relative;"><video webkit-playsinline="true" playsinline="true" muted="true" width="644" height="363" style="min-width: 100%; min-height: 100%; position: absolute; left: 0px; top: 0px; width: 960px; height: 540px; aspect-ratio: auto;" src="https://s8t.teads.tv/creative-6753877077099559/-1709112934644.high.mp4" class=""></video><img hidden="" sizes="100vw" style="width: 960px; height: 540px; z-index: 5; border: 0px; position: absolute; left: 0px; top: 0px;"><div class="bnt-viewport-indicator" hidden=""><div class="bnt-indicator"><div class="bnt-indicator-inner"></div></div><div class="bnt-indicator bnt-indicator-shadow"><div class="bnt-indicator-inner"></div></div></div><div class="bnt-viewport-indicator" hidden=""><div class="bnt-indicator"><div class="bnt-indicator-inner"></div></div><div class="bnt-indicator bnt-indicator-shadow"><div class="bnt-indicator-inner"></div></div></div></div></div></div></div></div></div><div class="position" id="Slide2" style="position: absolute; left: 0px; top: 0px; transform: rotateX(180deg) translateZ(3px); backface-visibility: hidden; bottom: 0px; opacity: 1; z-index: 99;"><div class="animation"><div style="width: 960px; height: 540px;"><div class="position" id="Image1" style="cursor: pointer; position: absolute; left: 0px; top: 0px; z-index: 1; transform: translateZ(1px);"><div class="animation"><div style="width: 960px; height: 540px; transform: rotate(0deg); overflow: hidden; position: relative;"><img sizes="100vw" srcset="https://s8t.teads.tv/creative-6753877077099559/-1709109320633.360.webp 360w, https://s8t.teads.tv/creative-6753877077099559/-1709109320633.720.webp 720w" src="https://s8t.teads.tv/creative-6753877077099559/-1709109320633.720.jpg" style="width: 960px; height: 540px; position: absolute; left: 0px; top: 0px; user-select: none; transform: translateZ(0px);"><img sizes="100vw" hidden="" style="width: 960px; height: 540px; position: absolute; left: 0px; top: 0px; user-select: none; transform: translateZ(0px);"><div class="bnt-viewport-indicator" hidden=""><div class="bnt-indicator"><div class="bnt-indicator-inner"></div></div><div class="bnt-indicator bnt-indicator-shadow"><div class="bnt-indicator-inner"></div></div></div><div class="bnt-viewport-indicator" hidden=""><div class="bnt-indicator"><div class="bnt-indicator-inner"></div></div><div class="bnt-indicator bnt-indicator-shadow"><div class="bnt-indicator-inner"></div></div></div></div></div></div></div></div></div></div></div></div><div class="position" id="Shape1" style="position: absolute; left: 0px; top: 0px; z-index: 1; transform: translateZ(0px);"><div class="animation"><div style="width: 960px; height: 540px; border-radius: 0px; background-color: rgb(255, 255, 255); border: 0px solid rgb(255, 255, 255); transform: rotate(0deg); box-sizing: border-box;"></div></div></div></div></div><style>
+      * {
+        -webkit-animation-duration: 0.4s;
+        animation-duration: 0.4s;
+      }
+      </style><style>.FlipCarousel_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.FlipCarousel_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style><style>.Slide1_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.Slide1_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style><style>.SwipePreview_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.SwipePreview_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style><style>
+        .bnt-viewport-indicator {
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          -webkit-transform: translateY(-50%) translateZ(0);
+          transform: translateY(-50%) translateZ(0);
+          border-radius: 50%;
+          background: rgba(0, 0, 0, .5);
+          z-index: 6;
+        }
+        .bnt-viewport-indicator:before {
+          content: "";
+          width: 21.25px;
+          height: 21.25px;
+          border: 1px solid rgba(255, 255, 255, 0.9);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          border-radius: inherit;
+        }
+        .bnt-viewport-indicator:after {
+          content: "";
+          width: 2.5px;
+          height: 2.5px;
+          background: rgba(255, 255, 255, 0.9);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          border-radius: inherit;
+        }
+        .bnt-viewport-indicator .bnt-indicator {
+          width: 0;
+          height: 0;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        .bnt-viewport-indicator .bnt-indicator .bnt-indicator-inner {
+          width: 25px;
+          height: 7.5px;
+          position: absolute;
+          left: 50%;
+          bottom: 2.5px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          overflow: hidden;
+        }
+        .bnt-viewport-indicator .bnt-indicator .bnt-indicator-inner:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 10px solid rgba(255, 255, 255, 0.9);
+          border-left: 6.25px solid transparent;
+          border-right: 6.25px solid transparent;
+          position: absolute;
+          left: 50%;
+          top: 0.625px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          border-radius: 100% 100% 0 0;
+        }
+        
+        .bnt-viewport-indicator .bnt-indicator.bnt-indicator-shadow .bnt-indicator-inner:after {
+          border-top-color: rgba(255, 255, 255, 0.1);
+        }
+      </style><style>.MainVideo_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.MainVideo_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style><style>.Slide2_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.Slide2_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style><style>.Image1_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.Image1_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style><style>.Shape1_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }
+.Shape1_27473220-9a29-2ac2-aeee-8111eee287fc_21c17e94-7f30-c0d0-f04e-20e56ad8579e_ {
+          -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+        }</style></body></html>

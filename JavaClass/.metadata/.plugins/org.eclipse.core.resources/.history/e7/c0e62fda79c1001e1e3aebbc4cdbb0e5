@@ -1,0 +1,57 @@
+package days25;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+
+/**
+ * @author LEE
+ * @date 2024. 2. 2. - 오후 12:07:42
+ * @subject
+ * @content
+ */
+public class Ex05 {
+
+	public static void main(String[] args) {
+		// [텍스트파일 복사]
+		// 원본파일을 읽어서	fileReader 
+		// 복사파일에 쓰기		fileWriter
+		String souceFile = ".\\src\\days25\\Ex01.java";
+		String copyFile = ".\\\\src\\\\days25\\\\Ex01_Copy.java";
+		
+		fileCopyTestStream(souceFile,copyFile);
+	}//main
+
+	private static void fileCopyTestStream(String sourceFile, String copyFile) {
+		long start = System.nanoTime();
+		
+		try (FileReader fr= new FileReader(sourceFile);
+			 FileWriter fw = new FileWriter(copyFile)){
+			// char -> int
+			int code;
+			while((code = fr.read())!=-1) {
+				System.out.printf("%c",(char)code);
+				//fw.append(code); // char, charSequence;
+				fw.write(code); //
+				//fw.flush();
+			}//while
+			fw.flush();
+			System.out.println("파일 복사 완료 !!");
+			
+			
+			long end = System.nanoTime();
+			System.out.printf(">복사 처리 시간 : %d(ns)\n", (end-start));
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}//class
+
+
+
+
+
+
+
+

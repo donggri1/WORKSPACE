@@ -1,0 +1,31 @@
+package days25;
+
+/**
+ * @author LEE
+ * @date 2024. 2. 2. - 오후 12:07:42
+ * @subject
+ * @content
+ */
+public class Ex05 {
+
+	public static void main(String[] args) {
+		// [텍스트파일 복사]
+		// 원본파일을 읽어서	fileReader 
+		// 복사파일에 쓰기		fileWriter
+		String souceFile = ".\\src\\days25\\Ex01.java";
+		String copyFile = ".\\\\src\\\\days25\\\\Ex01_Copy.java";
+		
+		
+		
+
+	}//main
+
+}//class
+
+
+
+
+
+
+
+
