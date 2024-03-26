@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	strong{
+		color:red;
+	}
+
+</style>
+</head>
+<body>
+<h3>html 서식 요소 - 특별한 유형의 텍스트를 표시</h3>
+
+	<ol type="1">
+		<li><b>bold 굵은 텍스트</b></li>
+		<li><strong>매우 중요한 텍스트</strong></li>
+		<!-- [i]talic 기술용어, 생각 등등  -->
+		<li><i>기울임꼴 텍스트</i></li>
+		<!-- [em]phasized,기울임꼴 -->
+		<li><em>텍스트</em></li>
+		<!-- 강조 표시, 노랑색 배경색 -->
+		<li><mark>텍스트</mark></li>
+		<li><small>텍스트</small></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+</head>
+<body>
+<!-- 
+	[html 링크]
+	링크를 클릭하면 다른 문서로 이동하는 것.
+	하이퍼링크
+	링크 위로 마우스를 이동하면 마우스 화살표->작은속 모양
+	링크는 텍스트, 이미지,기타 html 요소일 수 있다.
+
+ -->
+ 
+ <a href="http://www.naver.com">naver</a>
+ <br>
+ <a href="http://www.daum.com">daum</a>
+ <br>
+ <!--  -->
+ <a href="http://localhost/webPro/html/days02/ex01.html">days02.ex01.html</a>
+</body>
+</html>

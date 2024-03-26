@@ -1,0 +1,25 @@
+package days06;
+
+import java.util.Iterator;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+
+		String my_string="String";	
+		int k = 3;
+		
+		
+		String answer = my_string;
+		for (int i = 1; i < k; i++) {
+		 
+			my_string+=answer;
+			
+		}
+			answer = my_string;
+		System.out.println(answer);
+		
+	
+	}//main
+
+}

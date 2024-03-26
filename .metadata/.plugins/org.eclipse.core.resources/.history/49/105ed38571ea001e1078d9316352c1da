@@ -1,0 +1,29 @@
+package days06;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+import lombok.ToString;
+import oracle.sql.ARRAY;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+		int[] num_list= {2,1,6};
+		int n = 3;
+		int []  answer =  Arrays.copyOf(num_list, n);
+
+		
+		System.out.println(Arrays.toString(answer));
+	
+		
+
+
+		
+		
+
+
+		
+	}//main
+
+}

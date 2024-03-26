@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="https://s.pstatic.net/static/www/u/2014/0328/mma_204243574.png"> -->
+<link rel="shortcut icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
+<style>
+/* 링크태그에 스타일부여 */
+a{
+	color: #000; /*black #000000  */
+	text-decoration: none;
+}
+ 
+ a:hover{
+ color: orange; 
+ text-transform: capitalize;
+ text-decoration:  underline overline;
+/*  text-transform: uppercase; */
+ }
+
+</style>
+</head>
+<body>
+<!-- 
+	[html 링크]
+	링크를 클릭하면 다른 문서로 이동하는 것.
+	하이퍼링크
+	링크 위로 마우스를 이동하면 마우스 화살표->작은속 모양
+	링크는 텍스트, 이미지,기타 html 요소일 수 있다.
+
+ -->
+ 
+ <a href="http://www.naver.com">naver</a>
+ <br>
+ <a href="http://www.daum.com">daum</a>
+ <br>
+ <!-- 절대경로 -->
+ <a href="http://localhost/webPro/html/days02/Ex01.html">days02.Ex01.html</a>
+ <br>
+ <!--  상대경로 --> 
+ <!-- 기준경로 http://localhost/webPro/html/days02 폴더 -->
+  <a href="Ex01.html" target="blank">days02.Ex01.html</a>
+  <br>
+  <!-- 기준경로 http://localhost/webPro/html/days02 폴더 -->
+  <!-- <a href="./Ex01.html">days02.Ex01.html</a>  -->
+<!--   <a href="../Ex01.html">days02.Ex01.html</a> --> 
+  <a href="../../Ex01.html">days02.Ex01.html</a> 
+  <br>
+  
+  <!--
+  	1) 밑줄 + 보라색 : 방문한 링크
+  	2) 밑줄 + 파랑색 : 방문하지 않은 링크
+  	3) 밑줄 + 빨강색 : 방문하려고 클릭하는 순간의 링크
+  	
+  	a 링크 태그의 target 속성 ? 링크된 문서를 열 위치를 지정하는 속성
+  	 1) _self	기본값
+  	 2) _blank	새 창(새 탭)을 열어서 문서를 연다.
+  	 3) _parent	부모(상위) 프레임에 문서를 연다.
+  	 4) _top 	창 전체에서 문서를 연다.
+  	-->
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

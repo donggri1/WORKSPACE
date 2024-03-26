@@ -1,0 +1,201 @@
+/**********************************************
+note : design custom style page
+**********************************************/
+
+/* SEO 설정 @seo-modify (추후 admin.style.css에 추가분) */
+.seo-guide {display:block;font-size:.875rem;line-height:1.5;color:#000}
+.seo-guide:not(:only-child) {margin-top:.5rem}
+.seo-guide-title {display:block;margin-bottom:.5em;color:#f44e5c}
+.seo-guide-list {font-size:.9em}
+.seo-guide-list small {font-weight:light;font-weight:var(--wgt300, 300);color:#777}
+.seo-guide-point {font-weight:bold;font-weight:var(--wgt500, 500);color:#5684ff;text-decoration:underline}
+.seo-guide-more {margin:.5em 0 0;font-size:.8em;font-weight:light;font-weight:var(--wgt300, 300);color:#777}
+.seo-guide-link {color:#222 !important;text-decoration:underline}
+
+
+/**********************************************
+note : 리뉴얼 모드(작업자 : 안단비)
+**********************************************/
+/* 멀티기능성배너 */
+#rollBanner-1 .column, #rollBanner-1 .columns,
+#rollBanner-2 .column, #rollBanner-2 .columns,
+#rollBanner-3 .column, #rollBanner-3 .columns,
+#rollBanner-4 .column, #rollBanner-4 .columns {padding-right:0;padding-left:0}
+#rollBanner-1 .slick-slide,
+#rollBanner-2 .slick-slide,
+#rollBanner-3 .slick-slide,
+#rollBanner-4 .slick-slide {padding:0}
+
+/* 스킨 타이틀, 본문 간격 */
+.box-skin .auto-titles {letter-spacing:-.0625rem}
+.box-skin .auto-sum {letter-spacing:-.025rem}
+
+/* 네트워크 광고 여백 */
+#idx-cus03 .ad-template {padding-top:0 !important;margin-bottom:0 !important;padding-bottom:50px}
+
+/********************************************** 
+게시판 - 컨퍼런스 (작업자 : 안단비)
+**********************************************/
+.bbs-skin.conference-album {margin-bottom:1.5rem}
+.bbs-skin.conference-album .album-tiles {margin-bottom:1.25rem}
+.bbs-skin.conference-album .album-tiles::after {content:'';display:table;clear:both}
+.bbs-skin.conference-album .album-tiles > .item {float:left;position:relative;min-height:1px;margin-left:2%;margin-top:2%}
+.bbs-skin.conference-album .album-tiles > .item {width:32%}
+.bbs-skin.conference-album .album-tiles > :nth-child(3n + 1) {margin-left:0;clear:both}
+.bbs-skin.conference-album .album-tiles > :nth-child(-n + 3) {margin-top:0}
+.bbs-skin.conference-album .album-tiles > .item a {position:relative;text-decoration:none}
+.bbs-skin.conference-album .album-tiles .category {display:block;position:absolute;z-index:2;left:0;top:0;overflow:hidden;font-size:.813rem;color:#fff;background-color:#222;padding:6px 12px;font-weight:400;font-weight:var(--wgt400, 400);font-style:normal;line-height:1;text-overflow:ellipsis;white-space:nowrap}
+.bbs-skin.conference-album .album-tiles .image {display:block;overflow:hidden;position:relative;height:0;padding-bottom:56.25%;margin-bottom:1rem;}
+.bbs-skin.conference-album .album-tiles .image.noimage {background-color:#eee}
+.bbs-skin.conference-album .album-tiles .image.noimage.for-notice {background-image:url('/image/bbs_album_notice.svg');background-repeat:no-repeat;background-position:50%;background-color:#4e4e4e;background-size:48px 48px}
+.bbs-skin.conference-album .album-tiles .image::before {content:'';position:absolute;z-index:2;left:0;top:0;width:100%;height:100%;background:none;border:1px solid rgba(0,0,0,.15)}
+.bbs-skin.conference-album .album-tiles .image > img {position:absolute;z-index:1;left:50%;top:50%;width:100%;max-width:100%;max-height:100%;-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);opacity:.4}
+.bbs-skin.conference-album .album-tiles .image > .help-text {display:block;position:absolute;z-index:1;left:0;top:50%;width:100%;margin:0;padding:0 1rem;font-size:.75rem;font-weight:300;font-weight:var(--wgt300, 300);font-style:normal;line-height:1.25;color:rgba(0,0,0,.5);text-align:center;-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.bbs-skin.conference-album .album-tiles .image.noimage.for-notice > .help-text {display:none}
+.bbs-skin.conference-album .album-tiles .notice {display:inline-block;overflow:hidden;position:absolute;z-index:10;left:0;top:0;padding:0 .375rem;font-size:.688rem;font-weight:300;font-weight:var(--wgt300, 300);font-style:normal;line-height:20px;color:#fff;background-color:#f44e5c;white-space:nowrap}
+.bbs-skin.conference-album .album-tiles .content {display:block;padding-right:1.25rem}
+.bbs-skin.conference-album .album-tiles .titles {display:block;font-size:1.125rem;line-height:1.375;font-weight:600;font-weight:var(--wgt600, 600);letter-spacing:-.0125em;color:#1e1e1e}
+.bbs-skin.conference-album .album-tiles .item > a:hover .titles {text-decoration:underline}
+.bbs-skin.conference-album .album-tiles .info-box {display:block;margin:.625rem 0 .25rem 0;font-size:0;text-align:left}
+.bbs-skin.conference-album .album-tiles .info-box > em {display:block;font-size:.875rem;font-weight:400;font-weight:var(--wgt400, 400);font-style:normal;line-height:1.45;color:#666666;vertical-align:middle}
+
+/* 진행 */
+.bbs-skin.conference-album .album-tiles > .item.bbs-active .image > img {opacity:1}
+.bbs-skin.conference-album .album-tiles > .item.bbs-active .category {display:none}
+
+@media screen and (max-width: 63.9375em) {	
+	.row .bbs-user-page .titles {font-size:2rem}
+    .row .bbs-skin.conference-album .album-tiles > :nth-child(n) {width:49%;margin-left:2%;margin-top:1.25rem;clear:inherit}
+    .row .bbs-skin.conference-album .album-tiles > :nth-child(2n + 1) {margin-left:0;clear:both}
+    .row .bbs-skin.conference-album .album-tiles > :nth-child(-n + 2) {margin-top:0}
+}
+@media screen and (max-width: 39.9375em) {
+	.row .bbs-navs .item {width:33.333%;white-space:nowrap}
+    .row .bbs-skin.conference-album .album-tiles > :nth-child(n) {float:none;width:auto;margin-left:0;margin-top:1.25rem;clear:inherit}
+    .row .bbs-skin.conference-album .album-tiles > :first-child {margin-top:0}
+}
+
+/**********************************************
+note : 소개페이지
+**********************************************/
+/* 공통 */
+.about-us[class*="com-"] .content {font-size:1.125rem;font-weight:300;line-height:1.875;letter-spacing:-.0125em}
+.about-us[class*="com-"] .content > p {margin-bottom:2.5rem;line-height:inherit}
+@media screen and (max-width: 39.9375em) {
+    .about-us[class*="com-"] .content {font-size:1.063rem}
+}
+
+/* 소개페이지 */
+.about-us.com-1 .header > p {font-size:1.375rem;line-height:1.4;font-weight:500}
+
+/* 뉴스채널 */
+.about-us.com-3 .flex {display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -10px}
+.about-us.com-3 .flex > .cell {-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;padding:0 10px;margin-top:1.25rem}
+.about-us.com-3 .flex > .cell:nth-child(-n+2) {margin-top:0}
+.about-us.com-3 .sns-box a {display:block;padding:1.5rem .875rem;border:1px solid rgba(0,0,0,.08);text-decoration:none}
+.about-us.com-3 .img {position:relative;display:block;overflow:hidden;width:60px;margin:0 auto 1rem;border-radius:5px}
+.about-us.com-3 .img::before {content:'';display:block;padding-top:100%}
+.about-us.com-3 .img img {position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;transition:transform .25s}
+.about-us.com-3 .sns-box a:hover img {-ms-transform:scale(1.1,1.1);transform:scale(1.1,1.1)}
+.about-us.com-3 .titles {display:block;font-size:15px;line-height:1.25;font-weight:400;text-align:center}
+@media screen and (min-width: 39.9375em) {
+	.about-us.com-3 .flex {margin:0 -20px}
+	.about-us.com-3 .flex > .cell {-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%;padding:0 20px}
+	.about-us.com-3 .flex > .cell:nth-child(-n+4) {margin-top:0}
+	.about-us.com-3 .flex > .cell:nth-child(n+5) {margin-top:1.25rem}
+	.about-us.com-3 .sns-box a {padding:1.5rem}
+	.about-us.com-3 .sns-box a:hover {background-color:rgba(0,0,0,.035)}
+}
+
+/* 블로터의 팀은? */
+.about-us.com-4 figcaption {padding:0 0.625rem;margin-top:0.75rem;font-size:.8125rem;font-weight:400;font-weight:var(--wgt400,400);line-height:1.625;color:#777;text-align:left}
+@media screen and (max-width: 39.9375em) {
+	.about-us.com-4 figcaption {padding-left:1.25rem;padding-right:1.25rem;text-align:center}
+	.about-us.com-4 figcaption br {display:none}
+}
+
+/* 우리는 이렇게 일해요 */
+/*.about-us.com-6 .header {margin-bottom:1.875rem;padding:2.5rem 1.5rem;border:7px solid #ddd;text-align:center}*/
+.about-us.com-6 .header > p {margin-bottom:0;font-size:1.125rem;font-weight:500;line-height:1.875;letter-spacing:-.0125em}
+@media screen and (max-width: 39.9375em) {
+	.about-us.com-6 .header > p br {display:none}
+}
+
+/* 찾아오시는길 */
+#com-map.skin-5 .email {margin-left:.875rem;padding-left:.625rem;border-left:1px solid #aaa}
+@media screen and (max-width: 39.9375em) {
+	#com-map.skin-5 .email  {display:block;margin-top:.625rem;margin-left:0;padding-left:0;border-left:none}
+}
+
+/* 종목코드 선택 */
+#arl_jmcode span {display:inline-block; margin:5px; padding:0; word-wrap:break-word; font-size:.8125rem!important;}
+
+.view-aside.left-wing {padding-right: 25px;}
+
+/* 강수현 / 1275712 / 20230601 */
+.view-aside.right-wing {padding-left:25px}
+
+/* 강수현 / 1328330 / 20231206 */
+.article-body .update-txt {padding:2rem 0 2rem 0;text-align:center;}
+.article-body .update-txt .point {color:#b51515}
+
+@media screen and (max-width: 39.9375em) {
+	.update-txt {padding:2rem 0 2rem 0;text-align:center;font-size:.9rem}
+    .update-txt .point {color:#b51515}
+}
+
+.simplebox.short-vid{display:flex;}
+.simplebox.short-vid .simplebox-content{width: 400px;height: 714px !important;margin: 0 auto;}
+
+@media screen and (max-width: 39.9375em) {
+.simplebox.short-vid{display:block;}
+.simplebox.short-vid .simplebox-content{width: 100%;height: auto;}
+}
+
+/* 임희은 / 1344362 / 20240131 */
+.bbs-skin.conference-album .album-tiles .info-box > em.place {display:none}
+.bbs-skin.conference-album .pagin-group {text-align:center}
+.bbs-skin.conference-album .pagin-group .items {width:100%}
+.bbs-navs.conference {text-align:left;border-top:3px solid #000}
+.bbs-navs.conference .item {padding:0}
+.bbs-navs.conference .item::before {content:'';display:inline-block;overflow:hidden;width:0;height:.75rem;margin:0 .625rem;border-left:1px solid rgba(0,0,0,.25);vertical-align:middle}
+.bbs-navs.conference .item:nth-child(2)::before {display:none}
+.bbs-navs.conference .item.active {font-weight:bold}
+.bbs-user-page.conference {margin-bottom:.5rem;margin-top:-40px;padding-top:30px;border-top:1px solid #000}
+.bbs-user-page.conference .titles {font-weight:500;font-size:1.125rem;text-align:right}
+.bbs-skin.conference-album .album-tiles .category {padding:9px 12px;font-size:.975rem}
+@media screen and (max-width: 39.9375em) {
+.bbs-user-page.conference {margin-bottom:.5rem;margin-top:0;padding-top:0;border-top:0}
+.row .bbs-navs.conference .item {width:auto}
+}
+
+/* 임희은 / 1345048 / 20240202 */
+#rollBanner-5 {margin-left:-.9375rem;margin-right:-.9375rem;}
+
+/* 윤미정 / 1348115 / 20240214 */
+.bbs-skin.conference-album .album-tiles > .item {margin-top:4%}
+
+/* 윤미정 / 1349218 / 20240219 */
+.cmts-page .section-inner-wrap .ev-add {margin-top: 15px;font-size: .975rem;font-weight: 400;color: rgba(0,0,0,.95);}
+.cmts-page .section-inner-wrap .ev-add>* {display: inline-block;vertical-align: middle;}
+.cmts-page .section-inner-wrap .icon {width: 20px;height: 20px;margin-right: 0.625rem;background-position: 50% 50%;background-repeat: no-repeat;background-image: url(/image/company/map5-location.svg);}
+
+/* 강수현 / 1349584 / 20240220 */
+.about-us[class*="com-"] .content .title {font-size:1.375rem;line-height:1.4;font-weight:500}
+.about-us[class*="com-"] .martop-70 {margin-top:7rem}
+.about-us.com-6 .header p {font-size:1.375rem;line-height:1.4;font-weight:500}
+.about-us.com-6 .content .list {margin-bottom:.5rem;font-size:1.375rem;line-height:1.4;font-weight:500}
+.about-us.com-6 .content .list .num {background-color:#000;color:#fff;padding:0 0.5rem}
+
+/* 강수현 / 1351106 / 20240227 */
+.about-us.com-4 .header > p {font-size:2.125rem;line-height:1.4;font-weight:500}
+.about-us.com-4 .header > span {font-weight:500;color:#666}
+.com-type11 .site-rooted > li:not(:last-child) > a::after {padding:0 .5rem !important;}
+
+
+
+#conference-list .pay-cancel-line{color:#f44e5c; text-decoration:line-through; text-decoration-thickness:2px;}
+
+/* 배진희 / 1356016 / 20240314 */
+.bbs-user-page.conference{padding-top:38px}
+#rollBanner-5{margin-bottom:10px}

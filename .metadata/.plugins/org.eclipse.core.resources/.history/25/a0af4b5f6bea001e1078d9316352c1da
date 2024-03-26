@@ -1,0 +1,24 @@
+package days06;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+
+import lombok.ToString;
+import oracle.sql.ARRAY;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+		String answer = "";
+		String []  arr= {"a","b","c"};
+		for (String a :arr) {
+			 answer +=a;
+		}
+		
+
+System.out.println(answer);
+		
+	}//main
+
+}

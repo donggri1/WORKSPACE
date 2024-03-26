@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<!-- html 글꼴,글크기,글색상 : font,  -->
+
+<font size="1">안녕하세요. 홍길동입니다.</font>
+<font size="2">안녕하세요. 홍길동입니다.</font>
+<font size="3">안녕하세요. 홍길동입니다.</font>
+<font size="4">안녕하세요. 홍길동입니다.</font>
+<font size="5">안녕하세요. 홍길동입니다.</font>
+<font size="6">안녕하세요. 홍길동입니다.</font>
+<font size="7">안녕하세요. 홍길동입니다.</font>
+
+</body>
+</html>

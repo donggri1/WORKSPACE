@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* CSS 주석처리 */
+	/* CSS 스타일 적용 태그 */
+	/*
+	스타일 적용 대상{	==	select == 선택자
+		스타일 속성:속성값;
+		스타일 속성:속성값;
+		스타일 속성:속성값;
+		스타일 속성:속성값;
+	}
+	*/
+	h1,h2,h3,h4,h5,h6 {
+		border: solid 1px gray;
+	}
+	/*
+	h1 {
+		border: solid 1px gray; /* 테두리속성 : 실선 굵기 색깔 
+	}  
+	h2 {
+		border: solid 1px gray; /* 테두리속성 : 실선 굵기 색깔 
+	}
+	h3 {
+		border: solid 1px gray; /* 테두리속성 : 실선 굵기 색깔 
+	}
+	h4 {
+		border: solid 1px gray; /* 테두리속성 : 실선 굵기 색깔 
+	}
+	h5 {
+		border: solid 1px gray; /* 테두리속성 : 실선 굵기 색깔 
+	}
+	h6 {
+		border: solid 1px gray; /* 테두리속성 : 실선 굵기 색깔 
+	}
+	*/
+</style>
+</head>
+<BoDY>
+	<h3>html 제목(hn) - 웹페이지의 표시되는 제목 또는 부제목 </h3>
+	
+	<!-- http://koxo.com/ -->
+	<!--h$*6>{ h 요소 설명}   -->
+	<!-- <H1 style="font-size: 30"> h 요소 설명 - heading ==머릿글 텍스트</h1> -->
+	<!-- html 단위 생략가능(px)
+	css 당위 생략 에러 -->
+	<H1 style="font-size: 30"> h 요소 설명 - heading ==머릿글 텍스트</h1>
+	
+	<h2> h 요소 설명 - hn(1~6)</h2>
+	<h3> h 요소 설명 - [블럭모드] / 인라인모드</h3>
+	<h4> h 요소 설명</h4>
+	<h5> h 요소 설명</h5>
+	<h6> h 요소 설명</h6>
+
+	W3C - html 태그는 대소문자를 구분하지 않는다. ( 소문자 권장 )
+	      속성도 소문자 권장
+	      <시작태그 속성="속성값" 속성='속성값' 속성= 속성값 >내용<종료태그>
+	      속성은 그 요소의 추가적인 정보를 제공한다.
+	      모든 요소는 속성의 추가적인 정보를 제한다.
+	      
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+</head>
+<body>
+<pre>
+	관련 항목(item) 집합을 그룹화 : 목록(list);
+	html 목록 태그 :
+		ㄴ 순서 있는 목록 : [o]rdered   [l]ist, li
+		ㄴ 순서 없는 목록 : [u]nordered [l]ist, li
+</pre>
+
+<table style="width: 100%">
+	<tr>
+		<td></td>
+		<td></td>	
+	</tr>
+</table>
+</body>
+</html>

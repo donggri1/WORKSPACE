@@ -1,0 +1,26 @@
+package days06;
+
+import lombok.ToString;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+		String answer = "";
+
+		int a = 9;
+		int b= 91;
+		
+		int ab= Integer.parseInt(String.valueOf(a) +String.valueOf(b));
+		
+		String ba;
+		
+		
+		
+		
+		
+
+System.out.println(ab);
+		
+	}//main
+
+}

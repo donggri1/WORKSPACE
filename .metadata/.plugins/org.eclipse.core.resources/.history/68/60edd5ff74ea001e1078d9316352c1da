@@ -1,0 +1,30 @@
+package days06;
+
+import java.util.Arrays;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+
+		int a = 2;
+		int b = 91;
+		
+		int ab= Integer.parseInt(a+b+"");
+		int ab2 =2*a*b;
+		
+		int answer = Math.max(ab, ab2);
+		if (ab==ab2) {
+			answer = ab;
+		}
+		System.out.println(answer);
+				
+
+
+		
+		
+
+
+		
+	}//main
+
+}

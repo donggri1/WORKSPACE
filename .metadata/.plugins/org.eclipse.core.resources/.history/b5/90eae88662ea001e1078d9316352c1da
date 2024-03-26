@@ -1,0 +1,27 @@
+package days06;
+
+public class Ex01 {
+	public static void main(String[] args) {
+
+		String my_string = "string";
+
+		int k =3;
+
+		String answer =  solution(my_string, k);
+		System.out.print(answer);
+
+	}
+
+	public static String solution(String my_string, int k) {
+		String answer = "";
+		
+		for (int i = 0; i < k; i++) {
+			System.out.print(my_string);
+			
+		}
+		
+		
+		return answer;
+	}
+
+}

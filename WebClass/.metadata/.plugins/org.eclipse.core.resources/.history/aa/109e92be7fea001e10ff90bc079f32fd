@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+</head>
+<body>
+<h3>html 이미지</h3>
+
+<!-- 
+	img - 웹페이지의 디자인과 모양을 향상 시킬 수 있다.
+		- 인라인 모드이다.
+	html 폴더
+		ㄴ images 폴더 추가.
+		
+alt= "이미지 대체할 텍스트지정
+-->
+너비 500px, 높이 333px -->
+<img alt="이탈리안 튤립" src="../images/pic_trulli.jpg">
+
+
+<!-- 너비 250px,높이 166.5px -->
+<img alt="이탈리안 튤립" src="../images/pic_trulli.jpg"width="500">
+<!-- CSS style속성 너비 설정 css는 반드시 단위를 붙여야 한다. -->
+<img alt="이탈리안 튤립" src="../images/pic_trulli.jpg"width="250px">
+</body>
+</html>

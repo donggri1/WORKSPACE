@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script >
+	function bookmark() {
+		var url = "https://blog.google/intl/ko-kr/company-news/outreach-initiatives/changgoo-program-2024-registration-kr/?utm_source=apac_med&utm_medium=offdis&utm_content=Mar0424&utm_campaign=Ecosystem&pcampaignid=MKT-EAC-apac-kr-1707754-med-offdis-py-Ecosystem-Mar0424-1x1-TEADS_LSFLIP_Sub_30s_B_TQ1&dclid=CjgKEAjwwYSwBhCGlKT6oomM3X8SJABn3QQrSbrGWtNFvhz0puOvAio0mF3WgqJubxykoUhh6U94-fD_BwE"
+		location.href = url;
+	}
+</script>
+</head>
+<body>
+ <i class="icon-home"></i>홈IT·과학 IT기업
+
+</body>
+</html>

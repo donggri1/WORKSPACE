@@ -1,0 +1,16 @@
+package days06;
+
+import java.util.Iterator;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+
+		String [] arr  = {"a","b","c"};	
+		
+		
+		System.out.println(arr.toString());
+		
+	}//main
+
+}

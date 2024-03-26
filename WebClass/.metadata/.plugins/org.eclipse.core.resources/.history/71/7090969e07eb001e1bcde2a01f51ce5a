@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+</head>
+<body>
+
+<pre>
+
+CSS float 속성을 사용해서 이미지+ 텍스트의 설정.
+( 이미지를 텍스트의 왼쪽,오른쪽에 띄울 수 있다. )
+</pre>
+
+</body>
+</html>

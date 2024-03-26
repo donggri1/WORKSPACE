@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<style>
+	th,td{
+		/* border: solid 1px black; */
+		border: 1px solid #DDDDDD;	
+	}
+	table{
+		/* background-color: #96D4D4; */
+		border-spacing: 10px;
+		width: 100%;
+		
+	}
+	th,td{
+		/* background-color: #96d4d4; */
+	}
+</style>
+</head>
+<body>
+<pre>
+	[table]
+	- 데이터의 행과 열로 출력
+	- 행(row)	table row == tr
+	- 열(column)	table data == td ==cell 셀
+		th == table header cell
+			ㄴ bold, 가운데 정렬
+			
+		
+deptno   dname           loc	th(table header==clomn명)     
+10		ACCOUNTING   	NEW YORK<br> 
+20		RESEARCH   		DALLAS<br>      
+30 		SALES   		CHICAGO<br>         
+40		OPERATIONS  	BOSTON<br>   
+</pre>
+
+
+<!-- table 태그의 cellspacing속성 cellpadding 속성 
+ <table cellspacing="10px" cellpadding = "20px" > -->
+<table>
+ <tr>
+  <th >deptno</th>
+  <th >dname</th>
+  <th >loc</th>
+ </tr>
+ 
+ <tr>
+ 	<td>10</td>
+ 	<td>ACCOUNTING</td>
+ 	<td>NEW YORK</td>
+ </tr>
+  <tr>
+ 	<td>20</td>
+ 	<td>RESEARCH</td>
+ 	<td>DALLAS</td>
+ </tr>
+  <tr>
+ 	<td>30</td>
+ 	<td>SALES</td>
+ 	<td>CHICAGO</td>
+ </tr>
+  <tr>
+ 	<td>40</td>
+ 	<td>OPERATIONS</td>
+ 	<td>BOSTON</td>
+ </tr>
+</table>
+
+
+<!-- <table border="2" width=""> -->
+<!-- <table border="2" style="width:100%">
+ <tr>
+  <th width="20%">deptno</th>
+  <th width="50%">dname</th>
+  <th width="30%">loc</th>
+ </tr>
+ 
+ <tr>
+ 	<td>10</td>
+ 	<td>ACCOUNTING</td>
+ 	<td>NEW YORK</td>
+ </tr>
+  <tr>
+ 	<td>20</td>
+ 	<td>RESEARCH</td>
+ 	<td>DALLAS</td>
+ </tr>
+  <tr>
+ 	<td>30</td>
+ 	<td>SALES</td>
+ 	<td>CHICAGO</td>
+ </tr>
+  <tr>
+ 	<td>40</td>
+ 	<td>OPERATIONS</td>
+ 	<td>BOSTON</td>
+ </tr>
+</table> -->
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
