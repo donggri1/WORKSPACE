@@ -8,6 +8,8 @@
 3월 22, 2024 17:09:17.993 ERROR: No matching issuer found
 3월 22, 2024 17:09:17.993 
 3월 22, 2024 17:09:17.993 
+<<<<<<< HEAD
+=======
 
 3월 25, 2024 11:10:53.884 NEW SESSION
 3월 25, 2024 11:10:53.884 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
@@ -27,6 +29,7 @@
 3월 25, 2024 14:41:34.692 [13720:10448:0325/144134.692:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
 3월 25, 2024 14:44:27.465 [13720:10448:0325/144427.465:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
 3월 25, 2024 16:41:35.105 [13720:10448:0325/164135.105:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint (unset) for first_image_paint 0.159 s
+<<<<<<< HEAD
 
 3월 26, 2024 09:23:39.59 NEW SESSION
 3월 26, 2024 09:23:39.59 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
@@ -50,3 +53,6 @@
 3월 26, 2024 17:13:40.968 [16688:9804:0326/171340.968:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
 3월 26, 2024 17:13:40.968 [16688:9804:0326/171340.968:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
 3월 26, 2024 17:14:00.311 [16688:9804:0326/171400.311:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+=======
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb
+>>>>>>> branch 'main' of https://github.com/donggri1/WORKSPACE.git

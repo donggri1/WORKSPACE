@@ -1,0 +1,22 @@
+c:\e\class\workspace\webclass폴더생성
+
+https://tomcat.apache.org/
+	Apache Tomcat 8.5.99
+	Apache : 웹 서버
+	Tomcat : [W]eb[A]pplication[S]erver
+
+WebClass로 경로 이클립스 실행
+installed jre 경로 jdk
+enc utf-8로 변경
+ins 11로변경
+
+이클립스 프로젝트 : Dynamic web project
+
+프로젝트명 : webPro 
+java 11로 변경
+src/main/webapp/html 폴더생성
+src/main/webapp/index.html 생성
+server.xml의 63라인 - port->80으로변경
+http://192.168.10.168:80/webPro/index.html
+
+

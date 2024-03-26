@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+INDEX VERSION 1.131+C:\E\Class\WorkSpace\WebClass\.metadata\.plugins\org.eclipse.jdt.core
+=======
 INDEX VERSION 1.131+C:\E\Class\Workspace\WebClass\.metadata\.plugins\org.eclipse.jdt.core
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb
 3550414057.index
 1385735143.index
 471188313.index
@@ -18,16 +22,26 @@ INDEX VERSION 1.131+C:\E\Class\Workspace\WebClass\.metadata\.plugins\org.eclipse
 245928758.index
 896771111.index
 3796218723.index
+<<<<<<< HEAD
+786663684.index
+4088099809.index
+=======
 4088099809.index
 786663684.index
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb
 4150506862.index
 1811362335.index
 4127569825.index
 3384017088.index
 2753107402.index
 851543783.index
+<<<<<<< HEAD
+4282360800.index
+204404846.index
+=======
 204404846.index
 4282360800.index
+>>>>>>> f12e1cdf3065d30d661772fd4c6450f9aacf0bcb
 1285025392.index
 1133225971.index
 3817192108.index
